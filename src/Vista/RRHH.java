@@ -28,6 +28,12 @@ public class RRHH extends javax.swing.JFrame {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
+        GestionEmpleados = new javax.swing.JDialog();
+        jLabel9 = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
@@ -46,10 +52,56 @@ public class RRHH extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
 
+        GestionEmpleados.setBackground(new java.awt.Color(255, 255, 255));
+        GestionEmpleados.setModal(true);
+        GestionEmpleados.setSize(new java.awt.Dimension(400, 300));
+        GestionEmpleados.getContentPane().setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 20));
+        GestionEmpleados.getContentPane().add(jLabel9);
+
+        jButton6.setBackground(new java.awt.Color(100, 100, 250));
+        jButton6.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 14)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jButton6.setText("Dar de alta empleados");
+        jButton6.setPreferredSize(new java.awt.Dimension(350, 40));
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        GestionEmpleados.getContentPane().add(jButton6);
+
+        jButton7.setBackground(new java.awt.Color(100, 100, 250));
+        jButton7.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 14)); // NOI18N
+        jButton7.setForeground(new java.awt.Color(255, 255, 255));
+        jButton7.setText("Actualizar empleados");
+        jButton7.setPreferredSize(new java.awt.Dimension(350, 40));
+        GestionEmpleados.getContentPane().add(jButton7);
+
+        jButton8.setBackground(new java.awt.Color(100, 100, 250));
+        jButton8.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 14)); // NOI18N
+        jButton8.setForeground(new java.awt.Color(255, 255, 255));
+        jButton8.setText("Eliminar empleados");
+        jButton8.setPreferredSize(new java.awt.Dimension(350, 40));
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+        GestionEmpleados.getContentPane().add(jButton8);
+
+        jButton9.setBackground(new java.awt.Color(100, 100, 250));
+        jButton9.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 14)); // NOI18N
+        jButton9.setForeground(new java.awt.Color(255, 255, 255));
+        jButton9.setText("Ver tablas actu, dele,add");
+        jButton9.setPreferredSize(new java.awt.Dimension(350, 40));
+        GestionEmpleados.getContentPane().add(jButton9);
+
+        GestionEmpleados.setLocationRelativeTo(null);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(950, 550));
+        setPreferredSize(new java.awt.Dimension(850, 550));
         setResizable(false);
-        setSize(new java.awt.Dimension(950, 550));
+        setSize(new java.awt.Dimension(850, 550));
         getContentPane().setLayout(new javax.swing.OverlayLayout(getContentPane()));
 
         jPanel1.setLayout(new java.awt.BorderLayout());
@@ -66,7 +118,7 @@ public class RRHH extends javax.swing.JFrame {
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 452, Short.MAX_VALUE)
+            .addGap(0, 445, Short.MAX_VALUE)
         );
 
         jPanel1.add(jPanel3, java.awt.BorderLayout.LINE_START);
@@ -87,7 +139,7 @@ public class RRHH extends javax.swing.JFrame {
         jPanel2.add(jLabel3);
 
         jLabel1.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 14)); // NOI18N
-        jLabel1.setText("Inicio                                                ");
+        jLabel1.setText("Inicio                          ");
         jPanel2.add(jLabel1);
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
@@ -181,9 +233,10 @@ public class RRHH extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        RegisterEmpleado empleado = new RegisterEmpleado();
-        super.setVisible(false);
-        empleado.setVisible(true);
+//        RegisterEmpleado empleado = new RegisterEmpleado();
+//        super.setVisible(false);
+//        empleado.setVisible(true);
+          GestionEmpleados.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
@@ -191,6 +244,17 @@ public class RRHH extends javax.swing.JFrame {
         super.setVisible(false);
         inicio.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+           RegisterEmpleado empleado = new RegisterEmpleado();
+        super.setVisible(false);
+        GestionEmpleados.setVisible(false);
+        empleado.setVisible(true);
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -228,11 +292,16 @@ public class RRHH extends javax.swing.JFrame {
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static javax.swing.JDialog GestionEmpleados;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -240,6 +309,7 @@ public class RRHH extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

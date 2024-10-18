@@ -59,9 +59,9 @@ public static void muestraPanel(JPanel p){
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
 
-        iconuser.setLocation(new java.awt.Point(840, 90));
+        iconuser.setLocation(new java.awt.Point(1040, 90));
         iconuser.setModal(true);
-        iconuser.setSize(new java.awt.Dimension(400, 300));
+        iconuser.setSize(new java.awt.Dimension(200, 400));
 
         javax.swing.GroupLayout iconuserLayout = new javax.swing.GroupLayout(iconuser.getContentPane());
         iconuser.getContentPane().setLayout(iconuserLayout);
@@ -159,6 +159,9 @@ public static void muestraPanel(JPanel p){
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/engraneWhite.png"))); // NOI18N
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel1MouseEntered(evt);
             }
@@ -219,7 +222,7 @@ public static void muestraPanel(JPanel p){
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 809, Short.MAX_VALUE)
+            .addGap(0, 814, Short.MAX_VALUE)
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -274,9 +277,14 @@ public static void muestraPanel(JPanel p){
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
-        iconuser.setVisible(true);
-        iconuser.setLocation(840,90);
+        
     }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        iconuser.setVisible(true);
+//        iconuser.setLocation(840,90);
+
+    }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
      * @param args the command line arguments

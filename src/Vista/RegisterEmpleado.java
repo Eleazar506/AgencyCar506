@@ -7,6 +7,7 @@ package Vista;
 import java.awt.Image;
 import static java.awt.event.KeyEvent.*;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
@@ -63,7 +64,7 @@ public static String id="";
         jLabel15 = new javax.swing.JLabel();
         IdEmpresa = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
+        ingresDate = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel17 = new javax.swing.JLabel();
@@ -94,7 +95,7 @@ public static String id="";
         jButton4 = new javax.swing.JButton();
         jLabel24 = new javax.swing.JLabel();
         IdPersonal = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        ConfirmID = new javax.swing.JButton();
 
         OpenFiles.setLocation(new java.awt.Point(0, 0));
         OpenFiles.setModal(true);
@@ -119,8 +120,8 @@ public static String id="";
         OpenFiles.setLocationRelativeTo(null);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1301, 650));
-        setSize(new java.awt.Dimension(1301, 650));
+        setPreferredSize(new java.awt.Dimension(1201, 650));
+        setSize(new java.awt.Dimension(13201, 650));
         getContentPane().setLayout(new javax.swing.OverlayLayout(getContentPane()));
 
         jPanel1.setLayout(new java.awt.BorderLayout());
@@ -172,7 +173,7 @@ public static String id="";
 
         jLabel1.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(230, 230, 230));
-        jLabel1.setText("Alta de empleados");
+        jLabel1.setText("Alta de empleados       ");
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
@@ -247,8 +248,13 @@ public static String id="";
         jLabel15.setText("Id de empleado:");
 
         IdEmpresa.setEditable(false);
-        IdEmpresa.setEnabled(false);
+        IdEmpresa.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
         IdEmpresa.setFocusable(false);
+        IdEmpresa.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                IdEmpresaMouseClicked(evt);
+            }
+        });
         IdEmpresa.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 IdEmpresaKeyReleased(evt);
@@ -417,10 +423,12 @@ public static String id="";
         jButton3.setBackground(new java.awt.Color(250, 80, 80));
         jButton3.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 12)); // NOI18N
         jButton3.setText("Descartar");
+        jButton3.setPreferredSize(new java.awt.Dimension(95, 35));
 
         jButton4.setBackground(new java.awt.Color(100, 250, 100));
         jButton4.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 12)); // NOI18N
         jButton4.setText("Guardar");
+        jButton4.setPreferredSize(new java.awt.Dimension(95, 35));
 
         jLabel24.setForeground(java.awt.Color.white);
         jLabel24.setText("Curp o ID único:");
@@ -431,10 +439,10 @@ public static String id="";
             }
         });
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ConfirmID.setText("Confirmar ID");
+        ConfirmID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ConfirmIDActionPerformed(evt);
             }
         });
 
@@ -487,7 +495,7 @@ public static String id="";
                             .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(jTextField6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
                                 .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.LEADING))
-                            .addComponent(jButton1)))
+                            .addComponent(ConfirmID)))
                     .addComponent(jLabel10)
                     .addGroup(jPanel10Layout.createSequentialGroup()
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -495,7 +503,7 @@ public static String id="";
                             .addComponent(jLabel15))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ingresDate, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel16))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -527,9 +535,9 @@ public static String id="";
                     .addComponent(jLabel29)
                     .addComponent(jCheckBox5)
                     .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addComponent(jButton3)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton4)))
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(37, 37, 37))
         );
         jPanel10Layout.setVerticalGroup(
@@ -585,8 +593,8 @@ public static String id="";
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(IdPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                            .addComponent(ConfirmID))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel10Layout.createSequentialGroup()
                                 .addComponent(jLabel10)
@@ -600,7 +608,7 @@ public static String id="";
                                     .addComponent(jLabel11))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(ingresDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -620,8 +628,8 @@ public static String id="";
                     .addGroup(jPanel10Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton3)
-                            .addComponent(jButton4))
+                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(38, 38, 38))
                     .addGroup(jPanel10Layout.createSequentialGroup()
                         .addGap(32, 32, 32)
@@ -643,7 +651,7 @@ public static String id="";
                                 .addComponent(jLabel23)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(13, Short.MAX_VALUE))))
+                        .addContainerGap(11, Short.MAX_VALUE))))
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -744,19 +752,28 @@ public static String id="";
     }//GEN-LAST:event_jTextField6KeyReleased
 
     private void IdPersonalKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_IdPersonalKeyReleased
-//         char key=evt.getKeyChar();
+         char key=evt.getKeyChar();
 //        id=id+key;
 //        IdEmpresa.setText(id);
 //        
-//        if(key==VK_DELETE){
-//            
-//        }
+        if(key==VK_ENTER){
+            ConfirmID.doClick();
+        }
         //limpiar
     }//GEN-LAST:event_IdPersonalKeyReleased
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void ConfirmIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmIDActionPerformed
+      int opt= JOptionPane.showConfirmDialog(null,"Esta seguro que no hay errores en el ID.\nEn caso de confirmar y estar mal sobreescriba y pulse \"confirmar ID\"","??",JOptionPane.YES_NO_OPTION);
+      if(opt==0){
+        IdEmpresa.setText(IdPersonal.getText());
+        ingresDate.requestFocus();
+      }
+      
+    }//GEN-LAST:event_ConfirmIDActionPerformed
+
+    private void IdEmpresaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IdEmpresaMouseClicked
+        ingresDate.requestFocus();
+    }//GEN-LAST:event_IdEmpresaMouseClicked
 
     /**
      * @param args the command line arguments
@@ -794,13 +811,14 @@ public static String id="";
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ConfirmID;
     private javax.swing.JTextField IdEmpresa;
     private javax.swing.JTextField IdPersonal;
     public static javax.swing.JDialog OpenFiles;
     public static javax.swing.JLabel acountIcon;
     public static javax.swing.JLabel addft;
     public static javax.swing.JFileChooser chooser;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JTextField ingresDate;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JCheckBox jCheckBox1;
@@ -854,6 +872,5 @@ public static String id="";
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField8;
     // End of variables declaration//GEN-END:variables
 }
