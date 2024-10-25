@@ -45,10 +45,10 @@ public static void muestraPanel(JPanel p){
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -57,7 +57,14 @@ public static void muestraPanel(JPanel p){
         jPanel7 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
+        jMenu8 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
+        jMenu9 = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
+        jMenu10 = new javax.swing.JMenu();
+        jMenu5 = new javax.swing.JMenu();
+        jMenu11 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
 
         iconuser.setLocation(new java.awt.Point(840, 90));
         iconuser.setModal(true);
@@ -75,21 +82,23 @@ public static void muestraPanel(JPanel p){
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setSize(new java.awt.Dimension(1101, 656));
+        setPreferredSize(new java.awt.Dimension(900, 656));
+        setSize(new java.awt.Dimension(900, 656));
         getContentPane().setLayout(new javax.swing.OverlayLayout(getContentPane()));
 
         Muestra.setLayout(new java.awt.BorderLayout());
 
-        jPanel2.setBackground(new java.awt.Color(100, 100, 250));
+        jPanel2.setBackground(new java.awt.Color(50, 140, 250));
         jPanel2.setPreferredSize(new java.awt.Dimension(180, 586));
 
+        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black));
-        jPanel6.setMinimumSize(new java.awt.Dimension(170, 250));
-        jPanel6.setPreferredSize(new java.awt.Dimension(170, 250));
+        jPanel6.setMinimumSize(new java.awt.Dimension(170, 200));
+        jPanel6.setPreferredSize(new java.awt.Dimension(170, 180));
         jPanel6.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 10));
 
-        shop.setBackground(new java.awt.Color(100, 100, 250));
-        shop.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 12)); // NOI18N
+        shop.setBackground(new java.awt.Color(50, 140, 250));
+        shop.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
         shop.setForeground(new java.awt.Color(255, 255, 255));
         shop.setText("Punto de venta");
         shop.setPreferredSize(new java.awt.Dimension(160, 23));
@@ -100,8 +109,8 @@ public static void muestraPanel(JPanel p){
         });
         jPanel6.add(shop);
 
-        jButton1.setBackground(new java.awt.Color(100, 100, 250));
-        jButton1.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 12)); // NOI18N
+        jButton1.setBackground(new java.awt.Color(50, 140, 250));
+        jButton1.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("RRHH");
         jButton1.setPreferredSize(new java.awt.Dimension(160, 23));
@@ -112,49 +121,63 @@ public static void muestraPanel(JPanel p){
         });
         jPanel6.add(jButton1);
 
-        jButton3.setBackground(new java.awt.Color(100, 100, 250));
-        jButton3.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 12)); // NOI18N
+        jButton3.setBackground(new java.awt.Color(50, 140, 250));
+        jButton3.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Inventario");
         jButton3.setPreferredSize(new java.awt.Dimension(160, 23));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         jPanel6.add(jButton3);
 
-        jButton4.setBackground(new java.awt.Color(100, 100, 250));
-        jButton4.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 12)); // NOI18N
+        jButton4.setBackground(new java.awt.Color(50, 140, 250));
+        jButton4.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Contabilidad");
         jButton4.setPreferredSize(new java.awt.Dimension(160, 23));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         jPanel6.add(jButton4);
 
-        jButton5.setBackground(new java.awt.Color(100, 100, 250));
-        jButton5.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 12)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Ventas");
-        jButton5.setPreferredSize(new java.awt.Dimension(160, 23));
-        jPanel6.add(jButton5);
-
-        jButton6.setBackground(new java.awt.Color(100, 100, 250));
-        jButton6.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 12)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setText("Ajustes");
-        jButton6.setPreferredSize(new java.awt.Dimension(160, 23));
-        jPanel6.add(jButton6);
+        jButton2.setBackground(new java.awt.Color(50, 140, 250));
+        jButton2.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(250, 250, 250));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Exsesion.png"))); // NOI18N
+        jButton2.setText("Cerrar sesión");
+        jButton2.setPreferredSize(new java.awt.Dimension(161, 22));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(jButton2);
 
         jPanel2.add(jPanel6);
 
         Muestra.add(jPanel2, java.awt.BorderLayout.LINE_START);
 
-        jPanel3.setBackground(new java.awt.Color(100, 100, 250));
+        jPanel3.setBackground(new java.awt.Color(50, 140, 250));
         jPanel3.setPreferredSize(new java.awt.Dimension(1101, 70));
-        jPanel3.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT, 0, 0));
+        jPanel3.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 0, 0));
 
         jLabel4.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 14)); // NOI18N
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/Hous.png"))); // NOI18N
         jLabel4.setText("Inicio            ");
         jPanel3.add(jLabel4);
 
-        jPanel5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.darkGray, java.awt.Color.lightGray, java.awt.Color.black, java.awt.Color.lightGray));
-        jPanel5.setPreferredSize(new java.awt.Dimension(920, 50));
+        jLabel5.setText("                                            ");
+        jPanel3.add(jLabel5);
+
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray));
+        jPanel5.setMinimumSize(new java.awt.Dimension(500, 48));
+        jPanel5.setPreferredSize(new java.awt.Dimension(500, 50));
         jPanel5.setLayout(new java.awt.GridBagLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/engraneWhite.png"))); // NOI18N
@@ -167,7 +190,7 @@ public static void muestraPanel(JPanel p){
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.insets = new java.awt.Insets(0, 730, 0, 10);
+        gridBagConstraints.insets = new java.awt.Insets(0, 230, 0, 10);
         jPanel5.add(jLabel1, gridBagConstraints);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/usuariofinal.png"))); // NOI18N
@@ -212,7 +235,7 @@ public static void muestraPanel(JPanel p){
 
         Muestra.add(jPanel4, java.awt.BorderLayout.LINE_END);
 
-        jPanel7.setBackground(new java.awt.Color(222, 222, 222));
+        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
         jPanel7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
@@ -230,11 +253,43 @@ public static void muestraPanel(JPanel p){
 
         getContentPane().add(Muestra);
 
-        jMenu1.setText("File");
+        jMenuBar1.setToolTipText("Barra de herramientas");
+        jMenuBar1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        jMenu1.setText("Punto de venta");
+        jMenu1.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Edit");
+        jMenu8.setText("l");
+        jMenuBar1.add(jMenu8);
+
+        jMenu2.setText("RRHH");
+        jMenu2.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
         jMenuBar1.add(jMenu2);
+
+        jMenu9.setText("l");
+        jMenuBar1.add(jMenu9);
+
+        jMenu4.setText("Inventario");
+        jMenu4.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jMenuBar1.add(jMenu4);
+
+        jMenu10.setText("l");
+        jMenuBar1.add(jMenu10);
+
+        jMenu5.setText("Contabilidad");
+        jMenu5.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jMenuBar1.add(jMenu5);
+
+        jMenu11.setText("l");
+        jMenuBar1.add(jMenu11);
+
+        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/help.png"))); // NOI18N
+        jMenu3.setText("Ayuda");
+        jMenu3.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jMenu3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jMenu3.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
 
@@ -252,7 +307,9 @@ public static void muestraPanel(JPanel p){
     private void shopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shopActionPerformed
        Principal puntoV = new Principal();
        puntoV.setVisible(true);
+       puntoV.setSize(this.getSize());
        super.setVisible(false);
+       
     }//GEN-LAST:event_shopActionPerformed
 
     private void jLabel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseEntered
@@ -277,6 +334,26 @@ public static void muestraPanel(JPanel p){
         iconuser.setVisible(true);
         iconuser.setLocation(840,90);
     }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        Inventario inventario = new Inventario();
+        inventario.setVisible(true);
+        inventario.setSize(this.getSize());
+        super.setVisible(false);
+        
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Login log=new Login();
+        log.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+       Conta contabilidad = new Conta();
+       contabilidad.setVisible(true);
+       super.setVisible(false);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -317,16 +394,23 @@ public static void muestraPanel(JPanel p){
     public static javax.swing.JPanel Muestra;
     public static javax.swing.JDialog iconuser;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu10;
+    private javax.swing.JMenu jMenu11;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu8;
+    private javax.swing.JMenu jMenu9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

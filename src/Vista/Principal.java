@@ -23,7 +23,9 @@ public static Login logS=new Login();
         initComponents();
         this.setLocationRelativeTo(null);
         group.add(Sbrand);
-        group.add(Smodel);
+        group.add(Smodel);config.setModal(true);
+        this.toBack();
+        
 //        
 //       this.muestraPanel(ini);
     }
@@ -37,14 +39,12 @@ public static Login logS=new Login();
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        group = new javax.swing.ButtonGroup();
         config = new javax.swing.JDialog();
         jPanel10 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        group = new javax.swing.ButtonGroup();
         Muestra = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -55,7 +55,6 @@ public static Login logS=new Login();
         Search = new javax.swing.JTextField();
         BtnSearch = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
@@ -65,60 +64,45 @@ public static Login logS=new Login();
         jPanel4 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
 
-        config.setFocusTraversalPolicyProvider(true);
         config.setModal(true);
-        config.setSize(new java.awt.Dimension(245, 550));
-        config.getContentPane().setLayout(new java.awt.FlowLayout());
+        config.setPreferredSize(new java.awt.Dimension(240, 160));
+        config.setSize(new java.awt.Dimension(240, 160));
+        config.getContentPane().setLayout(new javax.swing.OverlayLayout(config.getContentPane()));
 
-        jPanel10.setBackground(new java.awt.Color(100, 100, 250));
+        jPanel10.setBackground(new java.awt.Color(50, 140, 250));
         jPanel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 10));
-        jPanel10.setPreferredSize(new java.awt.Dimension(235, 520));
-        jPanel10.setLayout(new java.awt.GridLayout(13, 1));
+        jPanel10.setMinimumSize(new java.awt.Dimension(146, 4));
+        jPanel10.setPreferredSize(new java.awt.Dimension(235, 130));
+        jPanel10.setLayout(new java.awt.GridLayout(0, 1));
 
-        jButton2.setText("Nueva venta");
-        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(100, 100, 250), 5));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jPanel10.add(jButton2);
-
+        jButton3.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
         jButton3.setText("Administración");
-        jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(100, 100, 250), 5));
+        jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(50, 140, 250), 5));
         jPanel10.add(jButton3);
 
+        jButton4.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
         jButton4.setText("Terminar dia");
-        jButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(100, 100, 250), 5));
+        jButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(50, 140, 250), 5));
         jPanel10.add(jButton4);
 
-        jButton5.setText("Reportes de venta");
-        jButton5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(100, 100, 250), 5));
-        jPanel10.add(jButton5);
-
-        jButton1.setFont(new java.awt.Font("Rockwell", 1, 10)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Ensesion.png"))); // NOI18N
         jButton1.setText("Cerrar sesión");
-        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(100, 100, 250), 5));
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(50, 140, 250), 5));
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButton1.setMinimumSize(new java.awt.Dimension(126, 20));
         jButton1.setPreferredSize(new java.awt.Dimension(126, 25));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
         jPanel10.add(jButton1);
 
         config.getContentPane().add(jPanel10);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setSize(new java.awt.Dimension(1101, 656));
+        setSize(new java.awt.Dimension(900, 656));
         getContentPane().setLayout(new javax.swing.OverlayLayout(getContentPane()));
 
         Muestra.setLayout(new java.awt.BorderLayout());
 
-        jPanel2.setBackground(new java.awt.Color(100, 100, 250));
+        jPanel2.setBackground(new java.awt.Color(50, 140, 250));
         jPanel2.setPreferredSize(new java.awt.Dimension(990, 80));
         java.awt.FlowLayout flowLayout1 = new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 6, 25);
         flowLayout1.setAlignOnBaseline(true);
@@ -149,6 +133,7 @@ public static Login logS=new Login();
         });
         jPanel2.add(tp);
 
+        Smodel.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
         Smodel.setText("Modelo");
         Smodel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -168,10 +153,10 @@ public static Login logS=new Login();
         });
         jPanel2.add(Smodel);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setText("|");
         jPanel2.add(jLabel1);
 
+        Sbrand.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
         Sbrand.setText("Marca");
         Sbrand.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -188,6 +173,7 @@ public static Login logS=new Login();
         });
         jPanel2.add(Sbrand);
 
+        Search.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
         Search.setPreferredSize(new java.awt.Dimension(500, 22));
         Search.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -207,12 +193,9 @@ public static Login logS=new Login();
         jLabel3.setText("              ");
         jPanel2.add(jLabel3);
 
-        jLabel4.setText("Bienvenido x");
-        jPanel2.add(jLabel4);
-
         Muestra.add(jPanel2, java.awt.BorderLayout.PAGE_START);
 
-        jPanel3.setBackground(new java.awt.Color(100, 100, 250));
+        jPanel3.setBackground(new java.awt.Color(50, 140, 250));
         jPanel3.setPreferredSize(new java.awt.Dimension(180, 446));
 
         jPanel7.setPreferredSize(new java.awt.Dimension(140, 520));
@@ -247,7 +230,7 @@ public static Login logS=new Login();
 
         Muestra.add(jPanel3, java.awt.BorderLayout.LINE_START);
 
-        jPanel5.setBackground(new java.awt.Color(100, 100, 250));
+        jPanel5.setBackground(new java.awt.Color(50, 140, 250));
         jPanel5.setPreferredSize(new java.awt.Dimension(180, 446));
 
         jPanel6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -268,7 +251,7 @@ public static Login logS=new Login();
 
         Muestra.add(jPanel5, java.awt.BorderLayout.LINE_END);
 
-        jPanel4.setBackground(new java.awt.Color(100, 100, 250));
+        jPanel4.setBackground(new java.awt.Color(50, 140, 250));
         jPanel4.setPreferredSize(new java.awt.Dimension(1101, 50));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -284,17 +267,17 @@ public static Login logS=new Login();
 
         Muestra.add(jPanel4, java.awt.BorderLayout.PAGE_END);
 
-        jPanel9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
+        jPanel9.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray));
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 721, Short.MAX_VALUE)
+            .addGap(0, 735, Short.MAX_VALUE)
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 506, Short.MAX_VALUE)
+            .addGap(0, 520, Short.MAX_VALUE)
         );
 
         Muestra.add(jPanel9, java.awt.BorderLayout.CENTER);
@@ -311,8 +294,10 @@ public static void muestraPanel(JPanel p){
     
 }
     private void tpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tpMouseClicked
-        config.setLocation(150, 115);
         config.setVisible(true);
+        config.setLocationRelativeTo(null);
+        config.toBack();
+        
     }//GEN-LAST:event_tpMouseClicked
 
     private void tpMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tpMouseEntered
@@ -370,26 +355,12 @@ public static void muestraPanel(JPanel p){
         Search.requestFocus();
     }//GEN-LAST:event_BtnSearchActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-//        FormEmpleado nuevoemp = new FormEmpleado();
-//        this.muestraPanel(nuevoemp);
-//        config.setVisible(false);
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-//        logS.muestraPanel(log);
-        logS.setVisible(true);
-        logS.user.requestFocus();
-//        logS.Muestra.setSize(691, 570);
-        config.setVisible(false);
-        this.setVisible(false);
-
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         InicioFrame inicio = new InicioFrame();
-        this.setVisible(false);
         inicio.setVisible(true);
+        inicio.setSize(this.getSize());
+        this.setVisible(false);
+        
     }//GEN-LAST:event_jLabel5MouseClicked
 
     /**
@@ -436,14 +407,11 @@ public static void muestraPanel(JPanel p){
     public static javax.swing.JDialog config;
     public static javax.swing.ButtonGroup group;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;

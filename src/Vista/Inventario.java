@@ -15,6 +15,7 @@ public class Inventario extends javax.swing.JFrame {
        grupo2.add(Smodel);
        grupo2.add(Sserie);
        Sname.doClick();
+
     }
 
 
@@ -24,6 +25,26 @@ public class Inventario extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         grupo2 = new javax.swing.ButtonGroup();
+        updateV = new javax.swing.JDialog();
+        jLabel13 = new javax.swing.JLabel();
+        jTextField10 = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        jTextField11 = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        jTextField12 = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        jTextField13 = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        jTextField14 = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        jTextField15 = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
+        jTextField16 = new javax.swing.JTextField();
+        jLabel20 = new javax.swing.JLabel();
+        jTextField17 = new javax.swing.JTextField();
+        jTextField18 = new javax.swing.JTextField();
+        jButton5 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -32,7 +53,7 @@ public class Inventario extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jPanel7 = new javax.swing.JPanel();
+        panButtons = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         modifica = new javax.swing.JButton();
         elimina = new javax.swing.JButton();
@@ -68,13 +89,180 @@ public class Inventario extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
+        updateV.setSize(new java.awt.Dimension(1000, 110));
+        updateV.getContentPane().setLayout(new java.awt.GridBagLayout());
+
+        jLabel13.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jLabel13.setText("Nombre");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.insets = new java.awt.Insets(0, 8, 20, 9);
+        updateV.getContentPane().add(jLabel13, gridBagConstraints);
+
+        jTextField10.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jTextField10.setPreferredSize(new java.awt.Dimension(110, 24));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.weightx = 4.0;
+        updateV.getContentPane().add(jTextField10, gridBagConstraints);
+
+        jLabel14.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jLabel14.setText("Modelo");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 8, 20, 9);
+        updateV.getContentPane().add(jLabel14, gridBagConstraints);
+
+        jTextField11.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jTextField11.setPreferredSize(new java.awt.Dimension(110, 24));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.weightx = 4.0;
+        updateV.getContentPane().add(jTextField11, gridBagConstraints);
+
+        jLabel15.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jLabel15.setText("Marca");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 8, 20, 9);
+        updateV.getContentPane().add(jLabel15, gridBagConstraints);
+
+        jTextField12.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jTextField12.setPreferredSize(new java.awt.Dimension(110, 24));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.weightx = 4.0;
+        updateV.getContentPane().add(jTextField12, gridBagConstraints);
+
+        jLabel16.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jLabel16.setText("Precio");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 8, 20, 9);
+        updateV.getContentPane().add(jLabel16, gridBagConstraints);
+
+        jTextField13.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jTextField13.setPreferredSize(new java.awt.Dimension(110, 24));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.weightx = 4.0;
+        updateV.getContentPane().add(jTextField13, gridBagConstraints);
+
+        jLabel17.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jLabel17.setText("No. serie");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 8;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 8, 20, 9);
+        updateV.getContentPane().add(jLabel17, gridBagConstraints);
+
+        jTextField14.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jTextField14.setPreferredSize(new java.awt.Dimension(110, 24));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 8;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.weightx = 4.0;
+        updateV.getContentPane().add(jTextField14, gridBagConstraints);
+
+        jLabel18.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jLabel18.setText("Tipo");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 10;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 8, 20, 9);
+        updateV.getContentPane().add(jLabel18, gridBagConstraints);
+
+        jTextField15.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jTextField15.setPreferredSize(new java.awt.Dimension(110, 24));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 10;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.weightx = 4.0;
+        updateV.getContentPane().add(jTextField15, gridBagConstraints);
+
+        jLabel19.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jLabel19.setText("Descripción");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 12;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 8, 20, 9);
+        updateV.getContentPane().add(jLabel19, gridBagConstraints);
+
+        jTextField16.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jTextField16.setPreferredSize(new java.awt.Dimension(110, 24));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 12;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.weightx = 4.0;
+        updateV.getContentPane().add(jTextField16, gridBagConstraints);
+
+        jLabel20.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jLabel20.setText("Cantidad");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 13;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 20, 0);
+        updateV.getContentPane().add(jLabel20, gridBagConstraints);
+
+        jTextField17.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jTextField17.setPreferredSize(new java.awt.Dimension(110, 24));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 12;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.weightx = 4.0;
+        updateV.getContentPane().add(jTextField17, gridBagConstraints);
+
+        jTextField18.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jTextField18.setPreferredSize(new java.awt.Dimension(110, 24));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 13;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.weightx = 4.0;
+        updateV.getContentPane().add(jTextField18, gridBagConstraints);
+
+        jButton5.setBackground(new java.awt.Color(100, 250, 100));
+        jButton5.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jButton5.setText("Actualizar");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 14;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.VERTICAL;
+        updateV.getContentPane().add(jButton5, gridBagConstraints);
+
+        jButton3.setBackground(new java.awt.Color(250, 80, 80));
+        jButton3.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jButton3.setText("Cancelar  ");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 14;
+        gridBagConstraints.gridy = 1;
+        updateV.getContentPane().add(jButton3, gridBagConstraints);
+
+        updateV.setModal(true);
+        updateV.setLocationRelativeTo(null);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setSize(new java.awt.Dimension(1101, 656));
+        setSize(new java.awt.Dimension(1180, 600));
         getContentPane().setLayout(new javax.swing.OverlayLayout(getContentPane()));
 
         jPanel1.setLayout(new java.awt.BorderLayout());
 
-        jPanel2.setBackground(new java.awt.Color(100, 100, 250));
+        jPanel2.setBackground(new java.awt.Color(50, 140, 250));
         jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/Hous.png"))); // NOI18N
@@ -85,13 +273,13 @@ public class Inventario extends javax.swing.JFrame {
         });
         jPanel2.add(jLabel2);
 
-        jLabel1.setText("                          ");
+        jLabel1.setText("  ");
         jPanel2.add(jLabel1);
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray));
-        jPanel6.setMinimumSize(new java.awt.Dimension(900, 60));
-        jPanel6.setPreferredSize(new java.awt.Dimension(900, 60));
+        jPanel6.setMinimumSize(new java.awt.Dimension(700, 60));
+        jPanel6.setPreferredSize(new java.awt.Dimension(700, 60));
         jPanel6.setLayout(new java.awt.GridBagLayout());
 
         jLabel3.setText("Inventario");
@@ -102,26 +290,27 @@ public class Inventario extends javax.swing.JFrame {
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/usuarioGrande.png"))); // NOI18N
         jLabel4.setText("Eleazar");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.insets = new java.awt.Insets(0, 500, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(0, 100, 0, 0);
         jPanel6.add(jLabel4, gridBagConstraints);
 
         jPanel2.add(jPanel6);
 
         jPanel1.add(jPanel2, java.awt.BorderLayout.PAGE_START);
 
-        jPanel3.setBackground(new java.awt.Color(100, 100, 250));
+        jPanel3.setBackground(new java.awt.Color(50, 140, 250));
         jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel3.setMinimumSize(new java.awt.Dimension(106, 16));
         jPanel3.setPreferredSize(new java.awt.Dimension(200, 556));
 
-        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        jPanel7.setPreferredSize(new java.awt.Dimension(190, 150));
-        jPanel7.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 10));
+        panButtons.setBackground(new java.awt.Color(255, 255, 255));
+        panButtons.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        panButtons.setPreferredSize(new java.awt.Dimension(190, 150));
+        panButtons.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 10));
 
-        jButton1.setBackground(new java.awt.Color(100, 100, 250));
+        jButton1.setBackground(new java.awt.Color(50, 140, 250));
         jButton1.setFont(new java.awt.Font("DejaVu Serif Condensed", 0, 15)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/add.png"))); // NOI18N
         jButton1.setText("Nuevo vehiculo");
         jButton1.setPreferredSize(new java.awt.Dimension(185, 35));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -129,23 +318,30 @@ public class Inventario extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel7.add(jButton1);
+        panButtons.add(jButton1);
 
-        modifica.setBackground(new java.awt.Color(100, 100, 250));
+        modifica.setBackground(new java.awt.Color(50, 140, 250));
         modifica.setFont(new java.awt.Font("DejaVu Serif Condensed", 0, 15)); // NOI18N
         modifica.setForeground(new java.awt.Color(255, 255, 255));
-        modifica.setText("Modificar vehiculo");
+        modifica.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/note_edit.png"))); // NOI18N
+        modifica.setText("Actualizar vehiculo");
         modifica.setPreferredSize(new java.awt.Dimension(185, 35));
-        jPanel7.add(modifica);
+        modifica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modificaActionPerformed(evt);
+            }
+        });
+        panButtons.add(modifica);
 
-        elimina.setBackground(new java.awt.Color(100, 100, 250));
+        elimina.setBackground(new java.awt.Color(50, 140, 250));
         elimina.setFont(new java.awt.Font("DejaVu Serif Condensed", 0, 15)); // NOI18N
         elimina.setForeground(new java.awt.Color(255, 255, 255));
+        elimina.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/delete.png"))); // NOI18N
         elimina.setText("Eliminar vehiculo");
         elimina.setPreferredSize(new java.awt.Dimension(185, 35));
-        jPanel7.add(elimina);
+        panButtons.add(elimina);
 
-        jPanel3.add(jPanel7);
+        jPanel3.add(panButtons);
 
         jPanel1.add(jPanel3, java.awt.BorderLayout.LINE_START);
 
@@ -351,17 +547,17 @@ public class Inventario extends javax.swing.JFrame {
         jTable1.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Nombre", "Modelo", "Precio", "No.serie", "Tipo", "Descripción", "Cantidad"
+                "Nombre", "Modelo", "Marca", "Precio", "No.serie", "Tipo", "Descripción", "Cantidad"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -377,6 +573,7 @@ public class Inventario extends javax.swing.JFrame {
             jTable1.getColumnModel().getColumn(4).setResizable(false);
             jTable1.getColumnModel().getColumn(5).setResizable(false);
             jTable1.getColumnModel().getColumn(6).setResizable(false);
+            jTable1.getColumnModel().getColumn(7).setResizable(false);
         }
 
         jPanel8.add(jScrollPane1);
@@ -394,8 +591,9 @@ public class Inventario extends javax.swing.JFrame {
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
        InicioFrame inicio = new InicioFrame();
+       inicio.setVisible(true);
+       inicio.setSize(this.getSize());
         this.setVisible(false);
-        inicio.setVisible(true);
     }//GEN-LAST:event_jLabel2MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -416,6 +614,19 @@ public class Inventario extends javax.swing.JFrame {
        elimina.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        updateV.setVisible(false);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        updateV.setVisible(false);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void modificaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificaActionPerformed
+        updateV.setVisible(true);
+        
+    }//GEN-LAST:event_modificaActionPerformed
+
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -429,12 +640,22 @@ public class Inventario extends javax.swing.JFrame {
     public static javax.swing.ButtonGroup grupo2;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -448,11 +669,19 @@ public class Inventario extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField13;
+    private javax.swing.JTextField jTextField14;
+    private javax.swing.JTextField jTextField15;
+    private javax.swing.JTextField jTextField16;
+    private javax.swing.JTextField jTextField17;
+    private javax.swing.JTextField jTextField18;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
@@ -462,6 +691,8 @@ public class Inventario extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     private javax.swing.JButton modifica;
+    public static javax.swing.JPanel panButtons;
     public static javax.swing.JPanel panel1;
+    public static javax.swing.JDialog updateV;
     // End of variables declaration//GEN-END:variables
 }
