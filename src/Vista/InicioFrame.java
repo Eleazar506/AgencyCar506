@@ -18,7 +18,6 @@ public class InicioFrame extends javax.swing.JFrame {
     public InicioFrame() {
         initComponents();
         this.setLocationRelativeTo(null);
-//        iconuser.setModal(false);
     }
 public static void muestraPanel(JPanel p){
         Muestra.removeAll();
@@ -38,6 +37,18 @@ public static void muestraPanel(JPanel p){
         java.awt.GridBagConstraints gridBagConstraints;
 
         iconuser = new javax.swing.JDialog();
+        rrHH = new javax.swing.JDialog();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jPanel10 = new javax.swing.JPanel();
+        jButton5 = new javax.swing.JButton();
         Muestra = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
@@ -81,9 +92,89 @@ public static void muestraPanel(JPanel p){
             .addGap(0, 300, Short.MAX_VALUE)
         );
 
+        rrHH.setModal(true);
+        rrHH.setResizable(false);
+        rrHH.setSize(new java.awt.Dimension(653, 205));
+        rrHH.getContentPane().setLayout(new javax.swing.OverlayLayout(rrHH.getContentPane()));
+
+        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 7, true));
+        jPanel1.setLayout(new java.awt.BorderLayout());
+
+        jPanel8.setBackground(new java.awt.Color(50, 140, 250));
+        jPanel8.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel8.setPreferredSize(new java.awt.Dimension(825, 80));
+        jPanel8.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/Hous.png"))); // NOI18N
+        jLabel6.setText("               ");
+        jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
+        jPanel8.add(jLabel6);
+
+        jLabel7.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 14)); // NOI18N
+        jPanel8.add(jLabel7);
+
+        jPanel9.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel9.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.black, null));
+        jPanel9.setPreferredSize(new java.awt.Dimension(550, 60));
+        jPanel9.setLayout(new java.awt.GridBagLayout());
+
+        jLabel8.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 14)); // NOI18N
+        jLabel8.setText("Recursos humanos");
+        jLabel8.setMaximumSize(new java.awt.Dimension(500, 500));
+        jLabel8.setMinimumSize(new java.awt.Dimension(200, 18));
+        jLabel8.setPreferredSize(new java.awt.Dimension(200, 18));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.insets = new java.awt.Insets(0, 20, 0, 130);
+        jPanel9.add(jLabel8, gridBagConstraints);
+
+        jLabel9.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 14)); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/engraneWhite.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 25);
+        jPanel9.add(jLabel9, gridBagConstraints);
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/usuarioGrande.png"))); // NOI18N
+        jLabel10.setText("Eleazar");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 25);
+        jPanel9.add(jLabel10, gridBagConstraints);
+
+        jLabel11.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 14)); // NOI18N
+        jLabel11.setText("^");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 25);
+        jPanel9.add(jLabel11, gridBagConstraints);
+
+        jPanel8.add(jPanel9);
+
+        jPanel1.add(jPanel8, java.awt.BorderLayout.PAGE_START);
+
+        jPanel10.setBackground(new java.awt.Color(40, 140, 250));
+        jPanel10.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 30, 20));
+
+        jButton5.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
+        jButton5.setText("Gestión de empleados");
+        jButton5.setFocusPainted(false);
+        jButton5.setPreferredSize(new java.awt.Dimension(500, 50));
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel10.add(jButton5);
+
+        jPanel1.add(jPanel10, java.awt.BorderLayout.CENTER);
+
+        rrHH.getContentPane().add(jPanel1);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(900, 656));
-        setSize(new java.awt.Dimension(900, 656));
+        setPreferredSize(new java.awt.Dimension(900, 646));
+        setSize(new java.awt.Dimension(900, 646));
         getContentPane().setLayout(new javax.swing.OverlayLayout(getContentPane()));
 
         Muestra.setLayout(new java.awt.BorderLayout());
@@ -322,17 +413,17 @@ public static void muestraPanel(JPanel p){
     }//GEN-LAST:event_jLabel1MouseExited
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-//        RegisterEmpleado regE = new RegisterEmpleado();
-//        this.setVisible(false);
-//        regE.setVisible(true);
-        RRHH rh = new RRHH();
-        super.setVisible(false);
-        rh.setVisible(true);
+        rrHH.setAlwaysOnTop(true); // Siempre encima
+//        iconuser.setSize(300, 200);
+        rrHH.setLocationRelativeTo(this); // Centrar el diálogo
+        rrHH.setVisible(true);   
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
-        iconuser.setVisible(true);
-        iconuser.setLocation(840,90);
+        iconuser.setAlwaysOnTop(true); // Siempre encima
+        iconuser.setSize(300, 200);
+        iconuser.setLocationRelativeTo(null); // Centrar el diálogo
+        iconuser.setVisible(true);        
     }//GEN-LAST:event_jLabel2MouseClicked
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -354,6 +445,20 @@ public static void muestraPanel(JPanel p){
        contabilidad.setVisible(true);
        super.setVisible(false);
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        InicioFrame inicio = new InicioFrame();
+        super.setVisible(false);
+        inicio.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        GestionEmpleados ge=new GestionEmpleados();
+        super.setVisible(false);
+        ge.setVisible(true);
+        rrHH.setVisible(false);
+        
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -397,11 +502,18 @@ public static void muestraPanel(JPanel p){
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu10;
     private javax.swing.JMenu jMenu11;
@@ -412,12 +524,17 @@ public static void muestraPanel(JPanel p){
     private javax.swing.JMenu jMenu8;
     private javax.swing.JMenu jMenu9;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
+    private javax.swing.JDialog rrHH;
     private javax.swing.JButton shop;
     // End of variables declaration//GEN-END:variables
 }

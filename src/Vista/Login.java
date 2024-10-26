@@ -55,22 +55,26 @@ public class Login extends javax.swing.JFrame {
 
         JP1.setBackground(new java.awt.Color(50, 140, 250));
         JP1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        JP1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        JP1.setPreferredSize(new java.awt.Dimension(230, 0));
+        JP1.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Inicio de sesión:");
-        JP1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
+        JP1.add(jLabel1);
+        jLabel1.setBounds(50, 20, 143, 26);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Usuario:");
-        JP1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 60, -1));
+        JP1.add(jLabel2);
+        jLabel2.setBounds(20, 80, 60, 20);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Contraseña:");
-        JP1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 120, -1));
+        JP1.add(jLabel3);
+        jLabel3.setBounds(20, 140, 120, 20);
 
         user.setFont(new java.awt.Font("DejaVu Sans Light", 1, 15)); // NOI18N
         user.setToolTipText("Inserte su usuario");
@@ -79,7 +83,8 @@ public class Login extends javax.swing.JFrame {
                 userKeyReleased(evt);
             }
         });
-        JP1.add(user, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 180, -1));
+        JP1.add(user);
+        user.setBounds(20, 100, 180, 24);
 
         pass.setFont(new java.awt.Font("DejaVu Sans Light", 1, 14)); // NOI18N
         pass.setToolTipText("Inserte su contraseña");
@@ -88,7 +93,8 @@ public class Login extends javax.swing.JFrame {
                 passKeyReleased(evt);
             }
         });
-        JP1.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 177, -1));
+        JP1.add(pass);
+        pass.setBounds(20, 160, 177, 23);
 
         look.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/ver.png"))); // NOI18N
         look.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -96,7 +102,8 @@ public class Login extends javax.swing.JFrame {
                 lookMouseClicked(evt);
             }
         });
-        JP1.add(look, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 21, 40));
+        JP1.add(look);
+        look.setBounds(200, 150, 21, 40);
 
         nolook.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/ocultar.png"))); // NOI18N
         nolook.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -104,7 +111,8 @@ public class Login extends javax.swing.JFrame {
                 nolookMouseClicked(evt);
             }
         });
-        JP1.add(nolook, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 20, 20));
+        JP1.add(nolook);
+        nolook.setBounds(200, 160, 20, 20);
 
         inis.setBackground(new java.awt.Color(50, 140, 250));
         inis.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -117,25 +125,29 @@ public class Login extends javax.swing.JFrame {
                 inisActionPerformed(evt);
             }
         });
-        JP1.add(inis, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 120, -1));
+        JP1.add(inis);
+        inis.setBounds(50, 220, 120, 21);
 
         Muestra.add(JP1);
 
         JP2.setBackground(new java.awt.Color(245, 245, 245));
         JP2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         JP2.setPreferredSize(new java.awt.Dimension(470, 370));
-        JP2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        JP2.setLayout(null);
 
         jLabel6.setFont(new java.awt.Font("Nimbus Mono PS", 0, 48)); // NOI18N
         jLabel6.setText("¡Bienvenido!");
-        JP2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, 60));
+        JP2.add(jLabel6);
+        jLabel6.setBounds(60, 20, 348, 60);
 
         jSeparator1.setBackground(new java.awt.Color(150, 150, 150));
         jSeparator1.setPreferredSize(new java.awt.Dimension(0, 4));
-        JP2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 70, 480, 10));
+        JP2.add(jSeparator1);
+        jSeparator1.setBounds(-10, 70, 480, 10);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/logot.png"))); // NOI18N
-        JP2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 250, 150));
+        JP2.add(jLabel4);
+        jLabel4.setBounds(110, 110, 250, 150);
 
         Muestra.add(JP2);
 

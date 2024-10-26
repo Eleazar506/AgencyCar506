@@ -58,7 +58,6 @@ public class GestionEmpleados extends javax.swing.JFrame {
         jList1 = new javax.swing.JList<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1000, 650));
         setSize(new java.awt.Dimension(1000, 650));
         getContentPane().setLayout(new javax.swing.OverlayLayout(getContentPane()));
 

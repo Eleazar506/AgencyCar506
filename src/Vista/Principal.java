@@ -65,7 +65,6 @@ public static Login logS=new Login();
         jPanel9 = new javax.swing.JPanel();
 
         config.setModal(true);
-        config.setPreferredSize(new java.awt.Dimension(240, 160));
         config.setSize(new java.awt.Dimension(240, 160));
         config.getContentPane().setLayout(new javax.swing.OverlayLayout(config.getContentPane()));
 
@@ -86,7 +85,6 @@ public static Login logS=new Login();
         jPanel10.add(jButton4);
 
         jButton1.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Ensesion.png"))); // NOI18N
         jButton1.setText("Cerrar sesión");
         jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(50, 140, 250), 5));
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
@@ -294,10 +292,11 @@ public static void muestraPanel(JPanel p){
     
 }
     private void tpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tpMouseClicked
+        config.setAlwaysOnTop(true); // Siempre encima
+        config.setSize(300, 200);
+        config.setLocationRelativeTo(null); // Centrar el diálogo
         config.setVisible(true);
-        config.setLocationRelativeTo(null);
-        config.toBack();
-        
+
     }//GEN-LAST:event_tpMouseClicked
 
     private void tpMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tpMouseEntered

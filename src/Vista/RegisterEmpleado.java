@@ -120,6 +120,7 @@ public static String id="";
         OpenFiles.setLocationRelativeTo(null);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1000, 700));
         setSize(new java.awt.Dimension(1000, 700));
         getContentPane().setLayout(new javax.swing.OverlayLayout(getContentPane()));
 
@@ -135,7 +136,7 @@ public static String id="";
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1089, Short.MAX_VALUE)
+            .addGap(0, 623, Short.MAX_VALUE)
         );
 
         jPanel1.add(jPanel2, java.awt.BorderLayout.LINE_END);
@@ -150,7 +151,7 @@ public static String id="";
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1089, Short.MAX_VALUE)
+            .addGap(0, 623, Short.MAX_VALUE)
         );
 
         jPanel1.add(jPanel3, java.awt.BorderLayout.LINE_START);
@@ -441,6 +442,7 @@ public static String id="";
 
         jButton3.setBackground(new java.awt.Color(250, 80, 80));
         jButton3.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 12)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Descartar");
         jButton3.setToolTipText("Descartar alta de empleado");
         jButton3.setFocusPainted(false);
@@ -454,6 +456,7 @@ public static String id="";
 
         jButton4.setBackground(new java.awt.Color(100, 250, 100));
         jButton4.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 12)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(102, 102, 102));
         jButton4.setText("Guardar");
         jButton4.setToolTipText("Registrar alta de empleado");
         jButton4.setFocusPainted(false);
@@ -701,7 +704,7 @@ public static String id="";
                                 .addComponent(jLabel23)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(22, Short.MAX_VALUE))))
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
