@@ -1,24 +1,27 @@
 
 package Vista;
-import com.jtattoo.plaf.luna.LunaLookAndFeel;
+import Controlador.UserOrAdmin;
+import Modelo.Conexion; //Modelo importacion
+import com.jtattoo.plaf.aero.AeroLookAndFeel;
 import java.awt.BorderLayout;
 import static java.awt.event.KeyEvent.VK_ENTER;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-
 public class Login extends javax.swing.JFrame {
-
-
+public static Conexion conn= new Conexion();
 
     public Login() {
         initComponents();
         pass.setEchoChar('*');
         this.setLocationRelativeTo(null);
         nolook.setVisible(false);
+        conn.conectaBd();//conexion a la BD
     }
 
     @SuppressWarnings("unchecked")
@@ -40,7 +43,8 @@ public class Login extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jLabel4 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        setTitle("Login");
         setResizable(false);
         setSize(new java.awt.Dimension(670, 370));
         addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -48,12 +52,17 @@ public class Login extends javax.swing.JFrame {
                 formComponentResized(evt);
             }
         });
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
         getContentPane().setLayout(new javax.swing.OverlayLayout(getContentPane()));
 
         Muestra.setBackground(new java.awt.Color(150, 180, 255));
         Muestra.setLayout(new javax.swing.BoxLayout(Muestra, javax.swing.BoxLayout.LINE_AXIS));
 
-        JP1.setBackground(new java.awt.Color(50, 140, 250));
+        JP1.setBackground(new java.awt.Color(113, 161, 166));
         JP1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         JP1.setPreferredSize(new java.awt.Dimension(230, 0));
         JP1.setLayout(null);
@@ -130,7 +139,7 @@ public class Login extends javax.swing.JFrame {
 
         Muestra.add(JP1);
 
-        JP2.setBackground(new java.awt.Color(245, 245, 245));
+        JP2.setBackground(new java.awt.Color(255, 255, 255));
         JP2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         JP2.setPreferredSize(new java.awt.Dimension(470, 370));
         JP2.setLayout(null);
@@ -158,16 +167,60 @@ public class Login extends javax.swing.JFrame {
 
     
     private void inisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inisActionPerformed
-//        Principal principal = new Principal();
-        InicioFrame inif = new InicioFrame();
-//SwingUtilities.invokeLater(new Runnable(){
-//public void run(){
-//    InicioFrame inif=new InicioFrame();
-    inif.setVisible(true);
-//}
-//});
-//        principal.setVisible(true);
-    this.setVisible(false);
+        String usuario=user.getText();
+        String password=String.valueOf(pass.getPassword());
+        InicioFrame ini= new InicioFrame();
+        UserOrAdmin ua= new UserOrAdmin();
+        ArrayList arr= new ArrayList();
+        String usad="";
+        if(!usuario.isEmpty()&&!password.isEmpty()){
+            
+            usad=usuario.substring(0, 3);
+            System.out.println(usad);
+            if(usad.equals("usr")){
+               JOptionPane.showMessageDialog(null, "Entro a usuarios  normales o PV ");
+            //Entra a la tabla de usuarios normales o usuarios de el PV 
+            }else if(usad.equals("adm")){
+                arr=ua.verificaAdmin(usuario,password);       
+                //Entra a la tabla de los usuarios administradores
+                if(!arr.isEmpty()){
+                    this.setVisible(false);
+                    ini.setVisible(true);
+                }else{
+                    JOptionPane.showMessageDialog(null, "Acceso denegado","ERROR!",JOptionPane.ERROR_MESSAGE);
+                }
+                
+            }else if(usad.equals("con")){
+                JOptionPane.showMessageDialog(null, "Entro a usuarios Contadores");
+                arr=ua.verificaConta(usuario,password);  
+                if(!arr.isEmpty()){
+                    Conta conta= new Conta();
+                    this.setVisible(false);
+                    conta.setVisible(true);
+                }else{
+                    JOptionPane.showMessageDialog(null, "Acceso denegado","ERROR!",JOptionPane.ERROR_MESSAGE);
+                }
+            }else
+                JOptionPane.showMessageDialog(null,"Tipo de usuario invalido");
+//            arr=ua.verificaAdmin(usuario,password);
+//          if(arr.isEmpty()){
+//              JOptionPane.showMessageDialog(null, "Este usuario no es existente.");
+//              user.setText("");
+//              pass.setText("");
+//              user.requestFocus();
+//          }else{
+//            this.setVisible(false);
+//            ini.setVisible(true);
+//          }
+        }else{
+            if(usuario.isEmpty()){
+                JOptionPane.showMessageDialog(null, "Inserte su usuario","Usuario incorrecto",JOptionPane.WARNING_MESSAGE);
+                user.requestFocus();
+            }else{
+                JOptionPane.showMessageDialog(null, "Inserte su contraseña","Contraseña incorrecta",JOptionPane.WARNING_MESSAGE);
+                pass.requestFocus();
+            }
+        }
 
     }//GEN-LAST:event_inisActionPerformed
 
@@ -202,6 +255,13 @@ public class Login extends javax.swing.JFrame {
             inis.doClick();
         }
     }//GEN-LAST:event_passKeyReleased
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+      int answ=JOptionPane.showConfirmDialog(this,"¿Estas seguro de salir?","!?",JOptionPane.YES_NO_OPTION);
+        if(answ==0){
+            System.exit(0);
+        }
+    }//GEN-LAST:event_formWindowClosing
 public static void muestraPanel(JPanel p){
         Muestra.removeAll();
         Muestra.add(p,BorderLayout.CENTER);
@@ -214,7 +274,9 @@ public static void muestraPanel(JPanel p){
      */
     public static void main(String args[]) {
          try {
-                    UIManager.setLookAndFeel(new LunaLookAndFeel()); // linea para cambiar LookAndFeel
+             //GraphiteLookAndFeel
+             //AeroLookAndFeel
+                    UIManager.setLookAndFeel(new AeroLookAndFeel()); // linea para cambiar LookAndFeel
                 } catch (UnsupportedLookAndFeelException ex) {
                     Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
                 }

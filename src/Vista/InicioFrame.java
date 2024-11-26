@@ -4,20 +4,24 @@ package Vista;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import static java.awt.event.KeyEvent.VK_ENTER;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+
 
 /**
  *
  * @author eleaz
  */
 public class InicioFrame extends javax.swing.JFrame {
-
+public static int widt;
+public static int heigt;
     /**
      * Creates new form InicioFrame
      */
     public InicioFrame() {
         initComponents();
         this.setLocationRelativeTo(null);
+        
     }
 public static void muestraPanel(JPanel p){
         Muestra.removeAll();
@@ -56,6 +60,7 @@ public static void muestraPanel(JPanel p){
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -172,26 +177,31 @@ public static void muestraPanel(JPanel p){
 
         rrHH.getContentPane().add(jPanel1);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(900, 646));
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setSize(new java.awt.Dimension(900, 646));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
         getContentPane().setLayout(new javax.swing.OverlayLayout(getContentPane()));
 
         Muestra.setLayout(new java.awt.BorderLayout());
 
-        jPanel2.setBackground(new java.awt.Color(50, 140, 250));
+        jPanel2.setBackground(new java.awt.Color(113, 161, 166));
         jPanel2.setPreferredSize(new java.awt.Dimension(180, 586));
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black));
-        jPanel6.setMinimumSize(new java.awt.Dimension(170, 200));
-        jPanel6.setPreferredSize(new java.awt.Dimension(170, 180));
+        jPanel6.setMinimumSize(new java.awt.Dimension(170, 210));
+        jPanel6.setPreferredSize(new java.awt.Dimension(170, 210));
         jPanel6.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 10));
 
         shop.setBackground(new java.awt.Color(50, 140, 250));
         shop.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
         shop.setForeground(new java.awt.Color(255, 255, 255));
         shop.setText("Punto de venta");
+        shop.setToolTipText("Hacer ventas");
         shop.setPreferredSize(new java.awt.Dimension(160, 23));
         shop.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -204,6 +214,7 @@ public static void muestraPanel(JPanel p){
         jButton1.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("RRHH");
+        jButton1.setToolTipText("Recursos humanos");
         jButton1.setPreferredSize(new java.awt.Dimension(160, 23));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -216,6 +227,7 @@ public static void muestraPanel(JPanel p){
         jButton3.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Inventario");
+        jButton3.setToolTipText("Inventario");
         jButton3.setPreferredSize(new java.awt.Dimension(160, 23));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -228,6 +240,7 @@ public static void muestraPanel(JPanel p){
         jButton4.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Contabilidad");
+        jButton4.setToolTipText("Contabilidad");
         jButton4.setPreferredSize(new java.awt.Dimension(160, 23));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -236,11 +249,24 @@ public static void muestraPanel(JPanel p){
         });
         jPanel6.add(jButton4);
 
+        jButton7.setBackground(new java.awt.Color(50, 140, 250));
+        jButton7.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
+        jButton7.setForeground(new java.awt.Color(255, 255, 255));
+        jButton7.setText("Nueva cuenta");
+        jButton7.setToolTipText("Contabilidad");
+        jButton7.setPreferredSize(new java.awt.Dimension(160, 23));
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(jButton7);
+
         jButton2.setBackground(new java.awt.Color(50, 140, 250));
         jButton2.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(250, 250, 250));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Exsesion.png"))); // NOI18N
         jButton2.setText("Cerrar sesión");
+        jButton2.setToolTipText("Close");
         jButton2.setPreferredSize(new java.awt.Dimension(161, 22));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -253,7 +279,7 @@ public static void muestraPanel(JPanel p){
 
         Muestra.add(jPanel2, java.awt.BorderLayout.LINE_START);
 
-        jPanel3.setBackground(new java.awt.Color(50, 140, 250));
+        jPanel3.setBackground(new java.awt.Color(113, 161, 166));
         jPanel3.setPreferredSize(new java.awt.Dimension(1101, 70));
         jPanel3.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 0, 0));
 
@@ -272,6 +298,7 @@ public static void muestraPanel(JPanel p){
         jPanel5.setLayout(new java.awt.GridBagLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/engraneWhite.png"))); // NOI18N
+        jLabel1.setToolTipText("Ajustes");
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel1MouseEntered(evt);
@@ -284,7 +311,6 @@ public static void muestraPanel(JPanel p){
         gridBagConstraints.insets = new java.awt.Insets(0, 230, 0, 10);
         jPanel5.add(jLabel1, gridBagConstraints);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/usuariofinal.png"))); // NOI18N
         jLabel2.setText("Eleazar");
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -311,6 +337,7 @@ public static void muestraPanel(JPanel p){
 
         Muestra.add(jPanel3, java.awt.BorderLayout.PAGE_START);
 
+        jPanel4.setBackground(new java.awt.Color(113, 161, 166));
         jPanel4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -321,12 +348,12 @@ public static void muestraPanel(JPanel p){
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 557, Short.MAX_VALUE)
+            .addGap(0, 580, Short.MAX_VALUE)
         );
 
         Muestra.add(jPanel4, java.awt.BorderLayout.LINE_END);
 
-        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel7.setBackground(new java.awt.Color(113, 161, 166));
         jPanel7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
@@ -337,7 +364,7 @@ public static void muestraPanel(JPanel p){
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 557, Short.MAX_VALUE)
+            .addGap(0, 580, Short.MAX_VALUE)
         );
 
         Muestra.add(jPanel7, java.awt.BorderLayout.CENTER);
@@ -349,6 +376,11 @@ public static void muestraPanel(JPanel p){
 
         jMenu1.setText("Punto de venta");
         jMenu1.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jMenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu1ActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(jMenu1);
 
         jMenu8.setText("l");
@@ -356,6 +388,11 @@ public static void muestraPanel(JPanel p){
 
         jMenu2.setText("RRHH");
         jMenu2.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jMenu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu2ActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(jMenu2);
 
         jMenu9.setText("l");
@@ -363,6 +400,11 @@ public static void muestraPanel(JPanel p){
 
         jMenu4.setText("Inventario");
         jMenu4.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jMenu4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu4ActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(jMenu4);
 
         jMenu10.setText("l");
@@ -370,6 +412,11 @@ public static void muestraPanel(JPanel p){
 
         jMenu5.setText("Contabilidad");
         jMenu5.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jMenu5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu5ActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(jMenu5);
 
         jMenu11.setText("l");
@@ -399,6 +446,7 @@ public static void muestraPanel(JPanel p){
        Principal puntoV = new Principal();
        puntoV.setVisible(true);
        puntoV.setSize(this.getSize());
+       puntoV.setLocationRelativeTo(null);
        super.setVisible(false);
        
     }//GEN-LAST:event_shopActionPerformed
@@ -416,7 +464,10 @@ public static void muestraPanel(JPanel p){
         rrHH.setAlwaysOnTop(true); // Siempre encima
 //        iconuser.setSize(300, 200);
         rrHH.setLocationRelativeTo(this); // Centrar el diálogo
+        this.widt=this.getWidth();
+        this.heigt=this.getHeight();
         rrHH.setVisible(true);   
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
@@ -430,6 +481,7 @@ public static void muestraPanel(JPanel p){
         Inventario inventario = new Inventario();
         inventario.setVisible(true);
         inventario.setSize(this.getSize());
+        inventario.setLocationRelativeTo(null);
         super.setVisible(false);
         
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -437,28 +489,77 @@ public static void muestraPanel(JPanel p){
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         Login log=new Login();
         log.setVisible(true);
-        this.setVisible(false);
+        this.setVisible(false); //Aca tengo que hacer visible el login que hice invisible
+//    new Login().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
        Conta contabilidad = new Conta();
        contabilidad.setVisible(true);
+       contabilidad.setSize(this.getSize());
        super.setVisible(false);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
         InicioFrame inicio = new InicioFrame();
         super.setVisible(false);
-        inicio.setVisible(true);        // TODO add your handling code here:
+        inicio.setVisible(true);
+        inicio.setSize(this.getSize());
+        rrHH.setVisible(false);
+        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel6MouseClicked
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         GestionEmpleados ge=new GestionEmpleados();
         super.setVisible(false);
         ge.setVisible(true);
+        ge.setSize(widt,heigt);
         rrHH.setVisible(false);
         
+        
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        int answ=JOptionPane.showConfirmDialog(this,"¿Estas seguro de salir?","!?",JOptionPane.YES_NO_OPTION);
+        if(answ==0){
+            System.exit(0);
+        }
+    }//GEN-LAST:event_formWindowClosing
+
+    private void jMenu5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu5ActionPerformed
+        Conta contabilidad = new Conta();
+        contabilidad.setVisible(true);
+        super.setVisible(false);
+    }//GEN-LAST:event_jMenu5ActionPerformed
+
+    private void jMenu4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu4ActionPerformed
+        Inventario inventario = new Inventario();
+        inventario.setVisible(true);
+        inventario.setSize(this.getSize());
+        inventario.setLocationRelativeTo(null);
+        super.setVisible(false);
+    }//GEN-LAST:event_jMenu4ActionPerformed
+
+    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
+        rrHH.setAlwaysOnTop(true); // Siempre encima
+        //        iconuser.setSize(300, 200);
+        rrHH.setLocationRelativeTo(this); // Centrar el diálogo
+        this.widt=this.getWidth();
+        this.heigt=this.getHeight();
+        rrHH.setVisible(true);
+    }//GEN-LAST:event_jMenu2ActionPerformed
+
+    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
+        Principal puntoV = new Principal();
+        puntoV.setVisible(true);
+        puntoV.setSize(this.getSize());
+        puntoV.setLocationRelativeTo(null);
+        super.setVisible(false);
+    }//GEN-LAST:event_jMenu1ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -503,6 +604,7 @@ public static void muestraPanel(JPanel p){
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

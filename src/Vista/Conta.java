@@ -1,6 +1,8 @@
 
 package Vista;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author chay
@@ -37,8 +39,6 @@ public class Conta extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -100,25 +100,30 @@ public class Conta extends javax.swing.JFrame {
         jPanel14 = new javax.swing.JPanel();
         jPanel15 = new javax.swing.JPanel();
         jLabel27 = new javax.swing.JLabel();
-        jPanel8 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jList2 = new javax.swing.JList<>();
         jPanel16 = new javax.swing.JPanel();
         jLabel28 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(198, 388));
-        setPreferredSize(new java.awt.Dimension(950, 650));
         setSize(new java.awt.Dimension(950, 650));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
         getContentPane().setLayout(new javax.swing.OverlayLayout(getContentPane()));
 
         jPanel1.setLayout(new java.awt.BorderLayout());
 
-        jPanel2.setBackground(new java.awt.Color(50, 140, 250));
+        jPanel2.setBackground(new java.awt.Color(113, 161, 166));
         jPanel2.setPreferredSize(new java.awt.Dimension(220, 220));
 
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel7.setPreferredSize(new java.awt.Dimension(200, 210));
+        jPanel7.setPreferredSize(new java.awt.Dimension(200, 150));
         jPanel7.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 9));
 
         jButton1.setBackground(new java.awt.Color(50, 140, 250));
@@ -176,30 +181,11 @@ public class Conta extends javax.swing.JFrame {
         jButton6.setPreferredSize(new java.awt.Dimension(180, 20));
         jPanel7.add(jButton6);
 
-        jButton7.setBackground(new java.awt.Color(50, 140, 250));
-        jButton7.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jButton7.setText("Ver balance general");
-        jButton7.setPreferredSize(new java.awt.Dimension(180, 20));
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-        jPanel7.add(jButton7);
-
-        jButton8.setBackground(new java.awt.Color(50, 140, 250));
-        jButton8.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(255, 255, 255));
-        jButton8.setText("Exportar balance");
-        jButton8.setPreferredSize(new java.awt.Dimension(180, 20));
-        jPanel7.add(jButton8);
-
         jPanel2.add(jPanel7);
 
         jPanel1.add(jPanel2, java.awt.BorderLayout.LINE_START);
 
-        jPanel3.setBackground(new java.awt.Color(50, 140, 250));
+        jPanel3.setBackground(new java.awt.Color(113, 161, 166));
         jPanel3.setMinimumSize(new java.awt.Dimension(100, 50));
         jPanel3.setPreferredSize(new java.awt.Dimension(1000, 50));
 
@@ -231,7 +217,7 @@ public class Conta extends javax.swing.JFrame {
 
         jPanel1.add(jPanel3, java.awt.BorderLayout.PAGE_START);
 
-        jPanel4.setBackground(new java.awt.Color(50, 140, 250));
+        jPanel4.setBackground(new java.awt.Color(113, 161, 166));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -246,11 +232,11 @@ public class Conta extends javax.swing.JFrame {
 
         jPanel1.add(jPanel4, java.awt.BorderLayout.LINE_END);
 
-        jPanel5.setBackground(new java.awt.Color(50, 140, 250));
+        jPanel5.setBackground(new java.awt.Color(113, 161, 166));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 5));
         jPanel5.setLayout(new javax.swing.BoxLayout(jPanel5, javax.swing.BoxLayout.Y_AXIS));
 
-        jPanel13.setBackground(new java.awt.Color(50, 140, 250));
+        jPanel13.setBackground(new java.awt.Color(113, 161, 166));
         jPanel13.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.darkGray));
         jPanel13.setPreferredSize(new java.awt.Dimension(50, 100));
         jPanel13.setLayout(new java.awt.GridBagLayout());
@@ -404,7 +390,7 @@ public class Conta extends javax.swing.JFrame {
 
         jPanel5.add(jPanel13);
 
-        jPanel11.setBackground(new java.awt.Color(50, 140, 250));
+        jPanel11.setBackground(new java.awt.Color(113, 161, 166));
         jPanel11.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.darkGray));
         jPanel11.setPreferredSize(new java.awt.Dimension(50, 100));
         jPanel11.setLayout(new java.awt.GridBagLayout());
@@ -500,7 +486,7 @@ public class Conta extends javax.swing.JFrame {
 
         jPanel5.add(jPanel11);
 
-        jPanel12.setBackground(new java.awt.Color(50, 140, 250));
+        jPanel12.setBackground(new java.awt.Color(113, 161, 166));
         jPanel12.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.darkGray));
         jPanel12.setPreferredSize(new java.awt.Dimension(50, 100));
         jPanel12.setLayout(new java.awt.GridBagLayout());
@@ -649,21 +635,17 @@ public class Conta extends javax.swing.JFrame {
         jPanel15.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.darkGray, java.awt.Color.darkGray, java.awt.Color.white, java.awt.Color.white));
         jPanel15.setLayout(new javax.swing.BoxLayout(jPanel15, javax.swing.BoxLayout.Y_AXIS));
 
-        jLabel27.setText("Ver balance general");
+        jLabel27.setText("Gastos");
         jPanel15.add(jLabel27);
 
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 896, Short.MAX_VALUE)
-        );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 278, Short.MAX_VALUE)
-        );
+        jList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane2.setViewportView(jList2);
 
-        jPanel15.add(jPanel8);
+        jPanel15.add(jScrollPane2);
 
         jPanel14.add(jPanel15);
 
@@ -673,7 +655,7 @@ public class Conta extends javax.swing.JFrame {
         jPanel16.setPreferredSize(new java.awt.Dimension(300, 184));
         jPanel16.setLayout(new javax.swing.BoxLayout(jPanel16, javax.swing.BoxLayout.Y_AXIS));
 
-        jLabel28.setText("Ver deudas");
+        jLabel28.setText("Deudas");
         jPanel16.add(jLabel28);
 
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
@@ -712,18 +694,13 @@ public class Conta extends javax.swing.JFrame {
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
         InicioFrame inicio = new InicioFrame();
         this.setVisible(false);
+        inicio.setSize(this.getSize());
         inicio.setVisible(true);
     }//GEN-LAST:event_jLabel2MouseClicked
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         jPanel13.setVisible(false);
     }//GEN-LAST:event_jButton10ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        jPanel11.setVisible(true);
-        jPanel13.setVisible(false);
-        jPanel12.setVisible(false);
-    }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         jPanel13.setVisible(false);
@@ -749,9 +726,18 @@ public class Conta extends javax.swing.JFrame {
         jPanel16.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        jPanel15.setVisible(true);
-    }//GEN-LAST:event_jButton7ActionPerformed
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+       int answ=JOptionPane.showConfirmDialog(this,"¿Estas seguro de salir?","!?",JOptionPane.YES_NO_OPTION);
+        if(answ==0){
+            System.exit(0);
+        }
+    }//GEN-LAST:event_formWindowClosing
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        jPanel11.setVisible(true);
+        jPanel13.setVisible(false);
+        jPanel12.setVisible(false);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -765,8 +751,6 @@ public class Conta extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
@@ -801,6 +785,7 @@ public class Conta extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JList<String> jList1;
+    private javax.swing.JList<String> jList2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
@@ -814,8 +799,8 @@ public class Conta extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JSpinner jSpinner2;
     private javax.swing.JSpinner jSpinner3;

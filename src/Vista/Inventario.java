@@ -11,7 +11,7 @@ public class Inventario extends javax.swing.JFrame {
      */
     public Inventario() {
         initComponents();
-        this.setLocationRelativeTo(null);
+//        this.setLocationRelativeTo(null);
        grupo2.add(Sname);
        grupo2.add(Smodel);
        grupo2.add(Sserie);
@@ -76,6 +76,7 @@ public class Inventario extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         panButtons = new javax.swing.JPanel();
+        jButton6 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         modifica = new javax.swing.JButton();
         elimina = new javax.swing.JButton();
@@ -91,9 +92,8 @@ public class Inventario extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
-        updateV.setBackground(new java.awt.Color(255, 255, 255));
+        updateV.setBackground(new java.awt.Color(113, 161, 166));
         updateV.setModal(true);
-        updateV.setPreferredSize(new java.awt.Dimension(1000, 100));
         updateV.setSize(new java.awt.Dimension(1000, 100));
         updateV.getContentPane().setLayout(new java.awt.GridBagLayout());
 
@@ -272,7 +272,7 @@ public class Inventario extends javax.swing.JFrame {
         });
         addNewCar.getContentPane().setLayout(new javax.swing.OverlayLayout(addNewCar.getContentPane()));
 
-        panel1.setBackground(new java.awt.Color(50, 140, 250));
+        panel1.setBackground(new java.awt.Color(113, 161, 166));
         panel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 5));
         panel1.setPreferredSize(new java.awt.Dimension(920, 70));
         panel1.setLayout(new java.awt.GridBagLayout());
@@ -451,13 +451,18 @@ public class Inventario extends javax.swing.JFrame {
 
         addNewCar.getContentPane().add(panel1);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setSize(new java.awt.Dimension(1180, 600));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
         getContentPane().setLayout(new javax.swing.OverlayLayout(getContentPane()));
 
         jPanel1.setLayout(new java.awt.BorderLayout());
 
-        jPanel2.setBackground(new java.awt.Color(50, 140, 250));
+        jPanel2.setBackground(new java.awt.Color(113, 161, 166));
         jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/Hous.png"))); // NOI18N
@@ -482,7 +487,6 @@ public class Inventario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 200);
         jPanel6.add(jLabel3, gridBagConstraints);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/usuarioGrande.png"))); // NOI18N
         jLabel4.setText("Eleazar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.insets = new java.awt.Insets(0, 100, 0, 0);
@@ -492,17 +496,30 @@ public class Inventario extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, java.awt.BorderLayout.PAGE_START);
 
-        jPanel3.setBackground(new java.awt.Color(50, 140, 250));
+        jPanel3.setBackground(new java.awt.Color(113, 161, 166));
         jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel3.setMinimumSize(new java.awt.Dimension(106, 16));
         jPanel3.setPreferredSize(new java.awt.Dimension(200, 556));
 
         panButtons.setBackground(new java.awt.Color(255, 255, 255));
         panButtons.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        panButtons.setPreferredSize(new java.awt.Dimension(190, 150));
+        panButtons.setPreferredSize(new java.awt.Dimension(190, 190));
         panButtons.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 10));
 
-        jButton1.setBackground(new java.awt.Color(50, 140, 250));
+        jButton6.setBackground(new java.awt.Color(90, 120, 255));
+        jButton6.setFont(new java.awt.Font("DejaVu Serif Condensed", 0, 15)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/accept.png"))); // NOI18N
+        jButton6.setText("Consultar");
+        jButton6.setPreferredSize(new java.awt.Dimension(185, 35));
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        panButtons.add(jButton6);
+
+        jButton1.setBackground(new java.awt.Color(90, 120, 255));
         jButton1.setFont(new java.awt.Font("DejaVu Serif Condensed", 0, 15)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/add.png"))); // NOI18N
@@ -515,7 +532,7 @@ public class Inventario extends javax.swing.JFrame {
         });
         panButtons.add(jButton1);
 
-        modifica.setBackground(new java.awt.Color(50, 140, 250));
+        modifica.setBackground(new java.awt.Color(90, 120, 255));
         modifica.setFont(new java.awt.Font("DejaVu Serif Condensed", 0, 15)); // NOI18N
         modifica.setForeground(new java.awt.Color(255, 255, 255));
         modifica.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/note_edit.png"))); // NOI18N
@@ -528,7 +545,7 @@ public class Inventario extends javax.swing.JFrame {
         });
         panButtons.add(modifica);
 
-        elimina.setBackground(new java.awt.Color(50, 140, 250));
+        elimina.setBackground(new java.awt.Color(90, 120, 255));
         elimina.setFont(new java.awt.Font("DejaVu Serif Condensed", 0, 15)); // NOI18N
         elimina.setForeground(new java.awt.Color(255, 255, 255));
         elimina.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/delete.png"))); // NOI18N
@@ -661,6 +678,17 @@ public class Inventario extends javax.swing.JFrame {
             elimina.setVisible(true);
     }//GEN-LAST:event_addNewCarWindowClosing
 
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        int answ=JOptionPane.showConfirmDialog(this,"¿Estas seguro de salir?","!?",JOptionPane.YES_NO_OPTION);
+        if(answ==0){
+            System.exit(0);
+        }
+    }//GEN-LAST:event_formWindowClosing
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -678,6 +706,7 @@ public class Inventario extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

@@ -4,6 +4,8 @@
  */
 package Vista;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author chay
@@ -39,6 +41,7 @@ public class GestionEmpleados extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
+        jButton4 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -54,17 +57,20 @@ public class GestionEmpleados extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jPanel10 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setSize(new java.awt.Dimension(1000, 650));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
         getContentPane().setLayout(new javax.swing.OverlayLayout(getContentPane()));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new java.awt.BorderLayout());
 
-        jPanel2.setBackground(new java.awt.Color(50, 140, 250));
+        jPanel2.setBackground(new java.awt.Color(113, 161, 166));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/Hous.png"))); // NOI18N
         jLabel1.setText("Inicio");
@@ -90,18 +96,34 @@ public class GestionEmpleados extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, java.awt.BorderLayout.PAGE_START);
 
-        jPanel3.setBackground(new java.awt.Color(50, 140, 250));
+        jPanel3.setBackground(new java.awt.Color(113, 161, 166));
         jPanel3.setPreferredSize(new java.awt.Dimension(200, 556));
 
         jPanel5.setBackground(new java.awt.Color(250, 250, 250));
-        jPanel5.setPreferredSize(new java.awt.Dimension(190, 150));
+        jPanel5.setMinimumSize(new java.awt.Dimension(455, 180));
+        jPanel5.setPreferredSize(new java.awt.Dimension(190, 180));
         jPanel5.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 12));
+
+        jButton4.setBackground(new java.awt.Color(50, 140, 250));
+        jButton4.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/accept.png"))); // NOI18N
+        jButton4.setText("Consultar");
+        jButton4.setToolTipText("Alta a nuevo empleado");
+        jButton4.setPreferredSize(new java.awt.Dimension(170, 30));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(jButton4);
 
         jButton1.setBackground(new java.awt.Color(50, 140, 250));
         jButton1.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/add.png"))); // NOI18N
         jButton1.setText("Dar de alta");
+        jButton1.setToolTipText("Alta a nuevo empleado");
         jButton1.setPreferredSize(new java.awt.Dimension(170, 30));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,6 +137,7 @@ public class GestionEmpleados extends javax.swing.JFrame {
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/note_edit.png"))); // NOI18N
         jButton2.setText("Actualizar");
+        jButton2.setToolTipText("Actualizar empleado");
         jButton2.setPreferredSize(new java.awt.Dimension(170, 30));
         jPanel5.add(jButton2);
 
@@ -123,6 +146,7 @@ public class GestionEmpleados extends javax.swing.JFrame {
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/delete.png"))); // NOI18N
         jButton3.setText("Eliminar");
+        jButton3.setToolTipText("Eliminar empleado");
         jButton3.setPreferredSize(new java.awt.Dimension(170, 30));
         jPanel5.add(jButton3);
 
@@ -132,7 +156,6 @@ public class GestionEmpleados extends javax.swing.JFrame {
 
         jPanel6.setLayout(new javax.swing.BoxLayout(jPanel6, javax.swing.BoxLayout.Y_AXIS));
 
-        jPanel7.setBackground(new java.awt.Color(230, 230, 230));
         jPanel7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray));
         jPanel7.setPreferredSize(new java.awt.Dimension(1101, 70));
 
@@ -182,18 +205,6 @@ public class GestionEmpleados extends javax.swing.JFrame {
         jPanel8.add(jPanel9);
 
         jPanel10.setLayout(new javax.swing.OverlayLayout(jPanel10));
-
-        jList1.setBackground(new java.awt.Color(230, 230, 230));
-        jList1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.darkGray, java.awt.Color.darkGray));
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane2.setViewportView(jList1);
-
-        jPanel10.add(jScrollPane2);
-
         jPanel8.add(jPanel10);
 
         jPanel6.add(jPanel8);
@@ -223,6 +234,17 @@ public class GestionEmpleados extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_FSearchActionPerformed
 
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+       int answ=JOptionPane.showConfirmDialog(this,"¿Estas seguro de salir?","!?",JOptionPane.YES_NO_OPTION);
+        if(answ==0){
+            System.exit(0);
+        }
+    }//GEN-LAST:event_formWindowClosing
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField FSearch;
@@ -233,11 +255,11 @@ public class GestionEmpleados extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
@@ -249,7 +271,6 @@ public class GestionEmpleados extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }
