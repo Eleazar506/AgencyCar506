@@ -3,6 +3,7 @@ package Controlador;
 
 import Modelo.Conexion;
 import javax.swing.JOptionPane;
+import java.sql.*;
 /**
  *
  * @author chay
@@ -18,4 +19,12 @@ public class logica {
              estado,  telefono, mail,  idarea,
              ubi,  horaEntrada, horaSalida, horaComida,  idpuesto);
     }
+    
+    public static ResultSet consulta(){
+        ResultSet rs=null;
+        
+        return rs;
+    }
+    
+    
 }
