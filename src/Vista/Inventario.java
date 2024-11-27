@@ -1,10 +1,15 @@
 
 package Vista;
 
+import Controlador.CodeLogic;
+import Controlador.UserOrAdmin;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 
 public class Inventario extends javax.swing.JFrame {
+public static DefaultTableModel modeloInventario=new DefaultTableModel();
 
     /**
      * Creates new form Inventario
@@ -16,6 +21,10 @@ public class Inventario extends javax.swing.JFrame {
        grupo2.add(Smodel);
        grupo2.add(Sserie);
        Sname.doClick();
+       modeloInventario=CodeLogic.mkmodel();
+       tableInventario.setModel(modeloInventario);
+       Object [] obj={};
+       obj=UserOrAdmin.consultaInv();
 
     }
 
@@ -77,7 +86,7 @@ public class Inventario extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         panButtons = new javax.swing.JPanel();
-        jButton6 = new javax.swing.JButton();
+        btnConsulta = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         modifica = new javax.swing.JButton();
         elimina = new javax.swing.JButton();
@@ -91,7 +100,7 @@ public class Inventario extends javax.swing.JFrame {
         Searching2 = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tableInventario = new javax.swing.JTable();
 
         updateV.setBackground(new java.awt.Color(113, 161, 166));
         updateV.setModal(true);
@@ -515,18 +524,18 @@ public class Inventario extends javax.swing.JFrame {
         panButtons.setPreferredSize(new java.awt.Dimension(190, 190));
         panButtons.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 10));
 
-        jButton6.setBackground(new java.awt.Color(113, 161, 166));
-        jButton6.setFont(new java.awt.Font("DejaVu Serif Condensed", 0, 15)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/accept.png"))); // NOI18N
-        jButton6.setText("Consultar");
-        jButton6.setPreferredSize(new java.awt.Dimension(185, 35));
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        btnConsulta.setBackground(new java.awt.Color(113, 161, 166));
+        btnConsulta.setFont(new java.awt.Font("DejaVu Serif Condensed", 0, 15)); // NOI18N
+        btnConsulta.setForeground(new java.awt.Color(255, 255, 255));
+        btnConsulta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/accept.png"))); // NOI18N
+        btnConsulta.setText("Consultar");
+        btnConsulta.setPreferredSize(new java.awt.Dimension(185, 35));
+        btnConsulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                btnConsultaActionPerformed(evt);
             }
         });
-        panButtons.add(jButton6);
+        panButtons.add(btnConsulta);
 
         jButton1.setBackground(new java.awt.Color(113, 161, 166));
         jButton1.setFont(new java.awt.Font("DejaVu Serif Condensed", 0, 15)); // NOI18N
@@ -560,6 +569,11 @@ public class Inventario extends javax.swing.JFrame {
         elimina.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/delete.png"))); // NOI18N
         elimina.setText("Eliminar vehiculo");
         elimina.setPreferredSize(new java.awt.Dimension(185, 35));
+        elimina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eliminaActionPerformed(evt);
+            }
+        });
         panButtons.add(elimina);
 
         jPanel3.add(panButtons);
@@ -598,8 +612,8 @@ public class Inventario extends javax.swing.JFrame {
 
         jPanel8.setLayout(new javax.swing.OverlayLayout(jPanel8));
 
-        jTable1.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tableInventario.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        tableInventario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null},
@@ -618,16 +632,16 @@ public class Inventario extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setResizable(false);
-            jTable1.getColumnModel().getColumn(1).setResizable(false);
-            jTable1.getColumnModel().getColumn(2).setResizable(false);
-            jTable1.getColumnModel().getColumn(3).setResizable(false);
-            jTable1.getColumnModel().getColumn(4).setResizable(false);
-            jTable1.getColumnModel().getColumn(5).setResizable(false);
-            jTable1.getColumnModel().getColumn(6).setResizable(false);
-            jTable1.getColumnModel().getColumn(7).setResizable(false);
+        jScrollPane1.setViewportView(tableInventario);
+        if (tableInventario.getColumnModel().getColumnCount() > 0) {
+            tableInventario.getColumnModel().getColumn(0).setResizable(false);
+            tableInventario.getColumnModel().getColumn(1).setResizable(false);
+            tableInventario.getColumnModel().getColumn(2).setResizable(false);
+            tableInventario.getColumnModel().getColumn(3).setResizable(false);
+            tableInventario.getColumnModel().getColumn(4).setResizable(false);
+            tableInventario.getColumnModel().getColumn(5).setResizable(false);
+            tableInventario.getColumnModel().getColumn(6).setResizable(false);
+            tableInventario.getColumnModel().getColumn(7).setResizable(false);
         }
 
         jPanel8.add(jScrollPane1);
@@ -686,9 +700,12 @@ public class Inventario extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_formWindowClosing
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    private void btnConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultaActionPerformed
+        modeloInventario.setRowCount(0);
+        tableInventario.setModel(modeloInventario);
+        UserOrAdmin.consultaInv();
+        
+    }//GEN-LAST:event_btnConsultaActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         updateV.setVisible(false);
@@ -697,6 +714,17 @@ public class Inventario extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         updateV.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void eliminaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminaActionPerformed
+      if(tableInventario.getSelectedRow()!=-1){
+          String idcar= (String) tableInventario.getValueAt(tableInventario.getSelectedRow(), 0);
+         int idauto=Integer.parseInt(idcar);
+          Controlador.UserOrAdmin.deleteCar(idauto);
+      }else{
+          JOptionPane.showMessageDialog(null, "Debe seleccionar un elemento de la tabla","WARNING",JOptionPane.WARNING_MESSAGE);
+      }
+        
+    }//GEN-LAST:event_eliminaActionPerformed
 
 
 
@@ -708,6 +736,7 @@ public class Inventario extends javax.swing.JFrame {
     public static javax.swing.JToggleButton Sname;
     public static javax.swing.JToggleButton Sserie;
     private javax.swing.JDialog addNewCar;
+    public static javax.swing.JButton btnConsulta;
     private javax.swing.JButton elimina;
     public static javax.swing.ButtonGroup grupo2;
     private javax.swing.JButton jButton1;
@@ -715,7 +744,6 @@ public class Inventario extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -745,7 +773,6 @@ public class Inventario extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
@@ -767,6 +794,7 @@ public class Inventario extends javax.swing.JFrame {
     private javax.swing.JButton modifica;
     public static javax.swing.JPanel panButtons;
     public static javax.swing.JPanel panel1;
+    public static javax.swing.JTable tableInventario;
     public static javax.swing.JDialog updateV;
     // End of variables declaration//GEN-END:variables
 }
