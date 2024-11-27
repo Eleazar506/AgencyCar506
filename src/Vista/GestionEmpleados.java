@@ -108,7 +108,7 @@ public class GestionEmpleados extends javax.swing.JFrame {
         jButton4.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/accept.png"))); // NOI18N
-        jButton4.setText("Consultar");
+        jButton4.setText("Ver mas deatalles");
         jButton4.setToolTipText("Alta a nuevo empleado");
         jButton4.setPreferredSize(new java.awt.Dimension(170, 30));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
