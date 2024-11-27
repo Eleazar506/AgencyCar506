@@ -70,7 +70,7 @@ public class GestionEmpleados extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new java.awt.BorderLayout());
 
-        jPanel2.setBackground(new java.awt.Color(113, 161, 166));
+        jPanel2.setBackground(new java.awt.Color(140, 162, 192));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/Hous.png"))); // NOI18N
         jLabel1.setText("Inicio");
@@ -96,7 +96,7 @@ public class GestionEmpleados extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, java.awt.BorderLayout.PAGE_START);
 
-        jPanel3.setBackground(new java.awt.Color(113, 161, 166));
+        jPanel3.setBackground(new java.awt.Color(140, 162, 192));
         jPanel3.setPreferredSize(new java.awt.Dimension(200, 556));
 
         jPanel5.setBackground(new java.awt.Color(250, 250, 250));
@@ -104,7 +104,7 @@ public class GestionEmpleados extends javax.swing.JFrame {
         jPanel5.setPreferredSize(new java.awt.Dimension(190, 180));
         jPanel5.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 12));
 
-        jButton4.setBackground(new java.awt.Color(50, 140, 250));
+        jButton4.setBackground(new java.awt.Color(113, 161, 166));
         jButton4.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/accept.png"))); // NOI18N
@@ -118,7 +118,7 @@ public class GestionEmpleados extends javax.swing.JFrame {
         });
         jPanel5.add(jButton4);
 
-        jButton1.setBackground(new java.awt.Color(50, 140, 250));
+        jButton1.setBackground(new java.awt.Color(113, 161, 166));
         jButton1.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/add.png"))); // NOI18N
@@ -132,7 +132,7 @@ public class GestionEmpleados extends javax.swing.JFrame {
         });
         jPanel5.add(jButton1);
 
-        jButton2.setBackground(new java.awt.Color(50, 140, 250));
+        jButton2.setBackground(new java.awt.Color(113, 161, 166));
         jButton2.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/note_edit.png"))); // NOI18N
@@ -141,7 +141,7 @@ public class GestionEmpleados extends javax.swing.JFrame {
         jButton2.setPreferredSize(new java.awt.Dimension(170, 30));
         jPanel5.add(jButton2);
 
-        jButton3.setBackground(new java.awt.Color(50, 140, 250));
+        jButton3.setBackground(new java.awt.Color(113, 161, 166));
         jButton3.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/delete.png"))); // NOI18N

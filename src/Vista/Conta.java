@@ -29,7 +29,6 @@ public class Conta extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
@@ -39,6 +38,7 @@ public class Conta extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -48,55 +48,54 @@ public class Conta extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jLabel12 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jSpinner5 = new javax.swing.JSpinner();
+        jLabel5 = new javax.swing.JLabel();
+        jTextField19 = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        jTextField20 = new javax.swing.JTextField();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
-        jLabel12 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jLabel13 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jLabel25 = new javax.swing.JLabel();
         jPanel11 = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
-        jLabel21 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
-        jLabel22 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox<>();
+        jTextField5 = new javax.swing.JTextField();
         jLabel23 = new javax.swing.JLabel();
         jSpinner4 = new javax.swing.JSpinner();
+        jLabel22 = new javax.swing.JLabel();
+        jComboBox4 = new javax.swing.JComboBox<>();
+        jLabel21 = new javax.swing.JLabel();
+        jTextField11 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jTextField9 = new javax.swing.JTextField();
         jButton12 = new javax.swing.JButton();
         jButton13 = new javax.swing.JButton();
-        jLabel24 = new javax.swing.JLabel();
         jPanel12 = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jLabel14 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
-        jLabel15 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
         jSpinner1 = new javax.swing.JSpinner();
-        jLabel17 = new javax.swing.JLabel();
-        jSpinner2 = new javax.swing.JSpinner();
-        jLabel18 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         jComboBox3 = new javax.swing.JComboBox<>();
-        jLabel19 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jSpinner2 = new javax.swing.JSpinner();
+        jLabel11 = new javax.swing.JLabel();
+        jTextField12 = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
         jSpinner3 = new javax.swing.JSpinner();
-        jButton2 = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
+        jTextField8 = new javax.swing.JTextField();
+        jLabel29 = new javax.swing.JLabel();
+        jTextField10 = new javax.swing.JTextField();
         jButton11 = new javax.swing.JButton();
-        jLabel26 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         jPanel14 = new javax.swing.JPanel();
         jPanel15 = new javax.swing.JPanel();
         jLabel27 = new javax.swing.JLabel();
@@ -119,14 +118,14 @@ public class Conta extends javax.swing.JFrame {
 
         jPanel1.setLayout(new java.awt.BorderLayout());
 
-        jPanel2.setBackground(new java.awt.Color(113, 161, 166));
+        jPanel2.setBackground(new java.awt.Color(140, 162, 192));
         jPanel2.setPreferredSize(new java.awt.Dimension(220, 220));
 
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel7.setPreferredSize(new java.awt.Dimension(200, 150));
+        jPanel7.setPreferredSize(new java.awt.Dimension(200, 190));
         jPanel7.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 9));
 
-        jButton1.setBackground(new java.awt.Color(50, 140, 250));
+        jButton1.setBackground(new java.awt.Color(113, 161, 166));
         jButton1.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Registrar compra");
@@ -138,7 +137,7 @@ public class Conta extends javax.swing.JFrame {
         });
         jPanel7.add(jButton1);
 
-        jButton3.setBackground(new java.awt.Color(50, 140, 250));
+        jButton3.setBackground(new java.awt.Color(113, 161, 166));
         jButton3.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Registro de gastos");
@@ -150,7 +149,7 @@ public class Conta extends javax.swing.JFrame {
         });
         jPanel7.add(jButton3);
 
-        jButton4.setBackground(new java.awt.Color(50, 140, 250));
+        jButton4.setBackground(new java.awt.Color(113, 161, 166));
         jButton4.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Registrar deuda");
@@ -162,7 +161,7 @@ public class Conta extends javax.swing.JFrame {
         });
         jPanel7.add(jButton4);
 
-        jButton5.setBackground(new java.awt.Color(50, 140, 250));
+        jButton5.setBackground(new java.awt.Color(113, 161, 166));
         jButton5.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Ver deudas");
@@ -174,18 +173,25 @@ public class Conta extends javax.swing.JFrame {
         });
         jPanel7.add(jButton5);
 
-        jButton6.setBackground(new java.awt.Color(50, 140, 250));
+        jButton6.setBackground(new java.awt.Color(113, 161, 166));
         jButton6.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
         jButton6.setForeground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Editar deuda");
         jButton6.setPreferredSize(new java.awt.Dimension(180, 20));
         jPanel7.add(jButton6);
 
+        jButton7.setBackground(new java.awt.Color(113, 161, 166));
+        jButton7.setFont(new java.awt.Font("Liberation Serif", 0, 15)); // NOI18N
+        jButton7.setForeground(new java.awt.Color(255, 255, 255));
+        jButton7.setText("Agregar proveedor");
+        jButton7.setPreferredSize(new java.awt.Dimension(180, 20));
+        jPanel7.add(jButton7);
+
         jPanel2.add(jPanel7);
 
         jPanel1.add(jPanel2, java.awt.BorderLayout.LINE_START);
 
-        jPanel3.setBackground(new java.awt.Color(113, 161, 166));
+        jPanel3.setBackground(new java.awt.Color(140, 162, 192));
         jPanel3.setMinimumSize(new java.awt.Dimension(100, 50));
         jPanel3.setPreferredSize(new java.awt.Dimension(1000, 50));
 
@@ -217,7 +223,7 @@ public class Conta extends javax.swing.JFrame {
 
         jPanel1.add(jPanel3, java.awt.BorderLayout.PAGE_START);
 
-        jPanel4.setBackground(new java.awt.Color(113, 161, 166));
+        jPanel4.setBackground(new java.awt.Color(140, 162, 192));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -236,108 +242,68 @@ public class Conta extends javax.swing.JFrame {
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 5));
         jPanel5.setLayout(new javax.swing.BoxLayout(jPanel5, javax.swing.BoxLayout.Y_AXIS));
 
-        jPanel13.setBackground(new java.awt.Color(113, 161, 166));
+        jPanel13.setBackground(new java.awt.Color(140, 162, 192));
         jPanel13.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.darkGray));
-        jPanel13.setPreferredSize(new java.awt.Dimension(50, 100));
-        jPanel13.setLayout(new java.awt.GridBagLayout());
+        jPanel13.setPreferredSize(new java.awt.Dimension(50, 50));
+        jPanel13.setLayout(new java.awt.GridLayout(8, 2));
 
-        jLabel5.setText("Nombre");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 10);
-        jPanel13.add(jLabel5, gridBagConstraints);
+        jLabel9.setText("    Descripción");
+        jLabel9.setPreferredSize(new java.awt.Dimension(50, 20));
+        jPanel13.add(jLabel9);
 
-        jTextField1.setPreferredSize(new java.awt.Dimension(80, 24));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 10);
-        jPanel13.add(jTextField1, gridBagConstraints);
+        jTextField6.setPreferredSize(new java.awt.Dimension(80, 24));
+        jPanel13.add(jTextField6);
 
-        jLabel6.setText("Categoria");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 10);
-        jPanel13.add(jLabel6, gridBagConstraints);
+        jLabel6.setText("    Categoria");
+        jLabel6.setPreferredSize(new java.awt.Dimension(50, 20));
+        jPanel13.add(jLabel6);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 10);
-        jPanel13.add(jComboBox1, gridBagConstraints);
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel13.add(jComboBox2);
 
-        jLabel7.setText("Proveedor");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 10);
-        jPanel13.add(jLabel7, gridBagConstraints);
-
-        jTextField2.setPreferredSize(new java.awt.Dimension(80, 24));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 10);
-        jPanel13.add(jTextField2, gridBagConstraints);
-
-        jLabel8.setText("Total a pagar");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 10);
-        jPanel13.add(jLabel8, gridBagConstraints);
-
-        jTextField3.setPreferredSize(new java.awt.Dimension(80, 24));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 10);
-        jPanel13.add(jTextField3, gridBagConstraints);
-
-        jLabel9.setText("Descripción");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 10);
-        jPanel13.add(jLabel9, gridBagConstraints);
+        jLabel12.setText("    Fecha");
+        jLabel12.setPreferredSize(new java.awt.Dimension(50, 20));
+        jPanel13.add(jLabel12);
 
         jTextField4.setPreferredSize(new java.awt.Dimension(80, 24));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 10);
-        jPanel13.add(jTextField4, gridBagConstraints);
+        jPanel13.add(jTextField4);
 
-        jLabel10.setText("Cantidad");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 10);
-        jPanel13.add(jLabel10, gridBagConstraints);
+        jLabel8.setText("    Total a pagar");
+        jLabel8.setPreferredSize(new java.awt.Dimension(50, 20));
+        jPanel13.add(jLabel8);
+        jPanel13.add(jSpinner5);
 
-        jTextField5.setPreferredSize(new java.awt.Dimension(80, 24));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 10);
-        jPanel13.add(jTextField5, gridBagConstraints);
+        jLabel5.setText("    id quien registra");
+        jLabel5.setPreferredSize(new java.awt.Dimension(50, 20));
+        jPanel13.add(jLabel5);
+
+        jTextField19.setPreferredSize(new java.awt.Dimension(80, 24));
+        jPanel13.add(jTextField19);
+
+        jLabel13.setText("    Método de pago");
+        jLabel13.setPreferredSize(new java.awt.Dimension(50, 20));
+        jPanel13.add(jLabel13);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel13.add(jComboBox1);
+
+        jLabel7.setText("    Proveedor");
+        jLabel7.setPreferredSize(new java.awt.Dimension(50, 20));
+        jPanel13.add(jLabel7);
+
+        jTextField20.setPreferredSize(new java.awt.Dimension(80, 24));
+        jPanel13.add(jTextField20);
 
         jButton9.setBackground(new java.awt.Color(250, 80, 80));
         jButton9.setForeground(new java.awt.Color(255, 255, 255));
         jButton9.setText("Cancelar");
+        jButton9.setPreferredSize(new java.awt.Dimension(50, 20));
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 8;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 40);
-        jPanel13.add(jButton9, gridBagConstraints);
+        jPanel13.add(jButton9);
 
         jButton10.setBackground(new java.awt.Color(100, 250, 100));
         jButton10.setForeground(new java.awt.Color(102, 102, 102));
@@ -347,107 +313,44 @@ public class Conta extends javax.swing.JFrame {
                 jButton10ActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 8;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 40);
-        jPanel13.add(jButton10, gridBagConstraints);
+        jPanel13.add(jButton10);
 
-        jLabel12.setText("Fecha");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 10);
-        jPanel13.add(jLabel12, gridBagConstraints);
-
-        jTextField6.setPreferredSize(new java.awt.Dimension(80, 24));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 10);
-        jPanel13.add(jTextField6, gridBagConstraints);
-
-        jLabel13.setText("Método de pago");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 10);
-        jPanel13.add(jLabel13, gridBagConstraints);
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 10);
-        jPanel13.add(jComboBox2, gridBagConstraints);
-
-        jLabel25.setText("Registro de compras");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 8;
-        jPanel13.add(jLabel25, gridBagConstraints);
+        jPanel13.setSize(50,50);
 
         jPanel5.add(jPanel13);
 
-        jPanel11.setBackground(new java.awt.Color(113, 161, 166));
+        jPanel11.setBackground(new java.awt.Color(140, 162, 192));
         jPanel11.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.darkGray));
-        jPanel11.setPreferredSize(new java.awt.Dimension(50, 100));
-        jPanel11.setLayout(new java.awt.GridBagLayout());
+        jPanel11.setPreferredSize(new java.awt.Dimension(50, 50));
+        jPanel11.setLayout(new java.awt.GridLayout(6, 2));
 
-        jLabel20.setText("Fecha");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 20);
-        jPanel11.add(jLabel20, gridBagConstraints);
+        jLabel20.setText("    Fecha");
+        jPanel11.add(jLabel20);
 
-        jTextField9.setPreferredSize(new java.awt.Dimension(120, 24));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 20);
-        jPanel11.add(jTextField9, gridBagConstraints);
+        jTextField5.setPreferredSize(new java.awt.Dimension(80, 24));
+        jPanel11.add(jTextField5);
 
-        jLabel21.setText("Concepto");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 20);
-        jPanel11.add(jLabel21, gridBagConstraints);
+        jLabel23.setText("    Total a pagar");
+        jPanel11.add(jLabel23);
+        jPanel11.add(jSpinner4);
 
-        jTextField11.setPreferredSize(new java.awt.Dimension(120, 24));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 20);
-        jPanel11.add(jTextField11, gridBagConstraints);
-
-        jLabel22.setText("Método de pago");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 20);
-        jPanel11.add(jLabel22, gridBagConstraints);
+        jLabel22.setText("    Método de pago");
+        jPanel11.add(jLabel22);
 
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A crédito", "Al contado", "Con cheque" }));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 20);
-        jPanel11.add(jComboBox4, gridBagConstraints);
+        jPanel11.add(jComboBox4);
 
-        jLabel23.setText("Monto");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 20);
-        jPanel11.add(jLabel23, gridBagConstraints);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 20);
-        jPanel11.add(jSpinner4, gridBagConstraints);
+        jLabel21.setText("    Descripcion");
+        jPanel11.add(jLabel21);
+
+        jTextField11.setPreferredSize(new java.awt.Dimension(120, 24));
+        jPanel11.add(jTextField11);
+
+        jLabel10.setText("    id quien registra");
+        jPanel11.add(jLabel10);
+
+        jTextField9.setPreferredSize(new java.awt.Dimension(120, 24));
+        jPanel11.add(jTextField9);
 
         jButton12.setBackground(new java.awt.Color(250, 80, 80));
         jButton12.setForeground(new java.awt.Color(255, 255, 255));
@@ -457,11 +360,7 @@ public class Conta extends javax.swing.JFrame {
                 jButton12ActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 20);
-        jPanel11.add(jButton12, gridBagConstraints);
+        jPanel11.add(jButton12);
 
         jButton13.setBackground(new java.awt.Color(100, 250, 100));
         jButton13.setForeground(new java.awt.Color(102, 102, 102));
@@ -471,138 +370,79 @@ public class Conta extends javax.swing.JFrame {
                 jButton13ActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 20);
-        jPanel11.add(jButton13, gridBagConstraints);
-
-        jLabel24.setText("Registro de gastos");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 5;
-        jPanel11.add(jLabel24, gridBagConstraints);
+        jPanel11.add(jButton13);
 
         jPanel5.add(jPanel11);
 
-        jPanel12.setBackground(new java.awt.Color(113, 161, 166));
+        jPanel12.setBackground(new java.awt.Color(140, 162, 192));
         jPanel12.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.darkGray));
-        jPanel12.setPreferredSize(new java.awt.Dimension(50, 100));
-        jPanel12.setLayout(new java.awt.GridBagLayout());
+        jPanel12.setPreferredSize(new java.awt.Dimension(50, 50));
+        jPanel12.setLayout(new java.awt.GridLayout(9, 2));
 
-        jLabel11.setText("Nombre de acreedor");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 5);
-        jPanel12.add(jLabel11, gridBagConstraints);
-
-        jTextField7.setPreferredSize(new java.awt.Dimension(100, 24));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 5);
-        jPanel12.add(jTextField7, gridBagConstraints);
-
-        jLabel14.setText("Fecha");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 5);
-        jPanel12.add(jLabel14, gridBagConstraints);
-
-        jTextField8.setPreferredSize(new java.awt.Dimension(100, 24));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 5);
-        jPanel12.add(jTextField8, gridBagConstraints);
-
-        jLabel15.setText("Monto");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 5);
-        jPanel12.add(jLabel15, gridBagConstraints);
+        jLabel19.setText("    Plazo(Meses)");
+        jLabel19.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(153, 153, 255)));
+        jLabel19.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel12.add(jLabel19);
 
         jSpinner1.setPreferredSize(new java.awt.Dimension(74, 24));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 5);
-        jPanel12.add(jSpinner1, gridBagConstraints);
+        jPanel12.add(jSpinner1);
 
-        jLabel17.setText("Porcentaje de interes");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 5);
-        jPanel12.add(jLabel17, gridBagConstraints);
+        jLabel16.setText("    Método");
+        jLabel16.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(153, 153, 255)));
+        jLabel16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel12.add(jLabel16);
+
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Crédito", "Contado" }));
+        jPanel12.add(jComboBox3);
+
+        jLabel17.setText("    Porcentaje de interes");
+        jLabel17.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(153, 153, 255)));
+        jLabel17.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel12.add(jLabel17);
 
         jSpinner2.setPreferredSize(new java.awt.Dimension(74, 24));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 5);
-        jPanel12.add(jSpinner2, gridBagConstraints);
+        jPanel12.add(jSpinner2);
 
-        jLabel18.setText("Motivo");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 5);
-        jPanel12.add(jLabel18, gridBagConstraints);
+        jLabel11.setText("    Nombre de acreedor");
+        jLabel11.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(153, 153, 255)));
+        jLabel11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel12.add(jLabel11);
+
+        jTextField12.setPreferredSize(new java.awt.Dimension(120, 24));
+        jPanel12.add(jTextField12);
+
+        jLabel18.setText("    Motivo");
+        jLabel18.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(153, 153, 255)));
+        jLabel18.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel12.add(jLabel18);
+
+        jTextField7.setPreferredSize(new java.awt.Dimension(100, 24));
+        jPanel12.add(jTextField7);
+
+        jLabel15.setText("    Monto");
+        jLabel15.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(153, 153, 255)));
+        jLabel15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel12.add(jLabel15);
+
+        jSpinner3.setPreferredSize(new java.awt.Dimension(84, 24));
+        jPanel12.add(jSpinner3);
+
+        jLabel14.setText("    Fecha");
+        jLabel14.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(153, 153, 255)));
+        jLabel14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel12.add(jLabel14);
+
+        jTextField8.setPreferredSize(new java.awt.Dimension(100, 24));
+        jPanel12.add(jTextField8);
+
+        jLabel29.setText("    id quien registra");
+        jLabel29.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(153, 153, 255)));
+        jLabel29.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel12.add(jLabel29);
 
         jTextField10.setMinimumSize(new java.awt.Dimension(120, 24));
         jTextField10.setPreferredSize(new java.awt.Dimension(100, 24));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 5);
-        jPanel12.add(jTextField10, gridBagConstraints);
-
-        jLabel16.setText("Método");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 5);
-        jPanel12.add(jLabel16, gridBagConstraints);
-
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Crédito", "Contado" }));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 5);
-        jPanel12.add(jComboBox3, gridBagConstraints);
-
-        jLabel19.setText("Plazo(Meses)");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 5);
-        jPanel12.add(jLabel19, gridBagConstraints);
-
-        jSpinner3.setPreferredSize(new java.awt.Dimension(84, 24));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 5);
-        jPanel12.add(jSpinner3, gridBagConstraints);
-
-        jButton2.setBackground(new java.awt.Color(100, 250, 100));
-        jButton2.setForeground(new java.awt.Color(102, 102, 102));
-        jButton2.setText("Registrar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 5);
-        jPanel12.add(jButton2, gridBagConstraints);
+        jPanel12.add(jTextField10);
 
         jButton11.setBackground(new java.awt.Color(250, 80, 80));
         jButton11.setForeground(new java.awt.Color(255, 255, 255));
@@ -612,18 +452,17 @@ public class Conta extends javax.swing.JFrame {
                 jButton11ActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 5);
-        jPanel12.add(jButton11, gridBagConstraints);
+        jPanel12.add(jButton11);
 
-        jLabel26.setText("Registro de deudas");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 7;
-        jPanel12.add(jLabel26, gridBagConstraints);
+        jButton2.setBackground(new java.awt.Color(100, 250, 100));
+        jButton2.setForeground(new java.awt.Color(102, 102, 102));
+        jButton2.setText("Registrar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel12.add(jButton2);
 
         jPanel5.add(jPanel12);
 
@@ -633,6 +472,7 @@ public class Conta extends javax.swing.JFrame {
 
         jPanel15.setBackground(new java.awt.Color(255, 255, 255));
         jPanel15.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.darkGray, java.awt.Color.darkGray, java.awt.Color.white, java.awt.Color.white));
+        jPanel15.setPreferredSize(new java.awt.Dimension(78, 304));
         jPanel15.setLayout(new javax.swing.BoxLayout(jPanel15, javax.swing.BoxLayout.Y_AXIS));
 
         jLabel27.setText("Gastos");
@@ -681,12 +521,14 @@ public class Conta extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         jPanel13.setVisible(true);
+      
         jPanel11.setVisible(false);
         jPanel12.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
        jPanel12.setVisible(true);
+       
        jPanel11.setVisible(false);
         jPanel13.setVisible(false);
     }//GEN-LAST:event_jButton4ActionPerformed
@@ -697,30 +539,6 @@ public class Conta extends javax.swing.JFrame {
         inicio.setSize(this.getSize());
         inicio.setVisible(true);
     }//GEN-LAST:event_jLabel2MouseClicked
-
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        jPanel13.setVisible(false);
-    }//GEN-LAST:event_jButton10ActionPerformed
-
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        jPanel13.setVisible(false);
-    }//GEN-LAST:event_jButton9ActionPerformed
-
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        jPanel11.setVisible(false);
-    }//GEN-LAST:event_jButton13ActionPerformed
-
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        jPanel11.setVisible(false);
-    }//GEN-LAST:event_jButton12ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        jPanel12.setVisible(false);
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        jPanel12.setVisible(false);
-    }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         jPanel16.setVisible(true);
@@ -735,9 +553,34 @@ public class Conta extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         jPanel11.setVisible(true);
+      
         jPanel13.setVisible(false);
         jPanel12.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        //jPanel13.setVisible(false);
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // jPanel13.setVisible(false);
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        jPanel11.setVisible(false);
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        jPanel11.setVisible(false);
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        jPanel12.setVisible(false);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        jPanel12.setVisible(false);
+    }//GEN-LAST:event_jButton11ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -751,6 +594,7 @@ public class Conta extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton9;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
@@ -772,11 +616,9 @@ public class Conta extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -805,11 +647,12 @@ public class Conta extends javax.swing.JFrame {
     private javax.swing.JSpinner jSpinner2;
     private javax.swing.JSpinner jSpinner3;
     private javax.swing.JSpinner jSpinner4;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JSpinner jSpinner5;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField19;
+    private javax.swing.JTextField jTextField20;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;

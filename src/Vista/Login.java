@@ -21,7 +21,7 @@ public static Conexion conn= new Conexion();
         pass.setEchoChar('*');
         this.setLocationRelativeTo(null);
         nolook.setVisible(false);
-        conn.conectaBd();//conexion a la BD
+        conn.conectagency();//conexion a la BD
     }
 
     @SuppressWarnings("unchecked")
@@ -62,7 +62,7 @@ public static Conexion conn= new Conexion();
         Muestra.setBackground(new java.awt.Color(150, 180, 255));
         Muestra.setLayout(new javax.swing.BoxLayout(Muestra, javax.swing.BoxLayout.LINE_AXIS));
 
-        JP1.setBackground(new java.awt.Color(113, 161, 166));
+        JP1.setBackground(new java.awt.Color(140, 162, 192));
         JP1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         JP1.setPreferredSize(new java.awt.Dimension(230, 0));
         JP1.setLayout(null);
@@ -123,7 +123,7 @@ public static Conexion conn= new Conexion();
         JP1.add(nolook);
         nolook.setBounds(200, 160, 20, 20);
 
-        inis.setBackground(new java.awt.Color(50, 140, 250));
+        inis.setBackground(new java.awt.Color(113, 161, 166));
         inis.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         inis.setForeground(new java.awt.Color(255, 255, 255));
         inis.setText("Login");

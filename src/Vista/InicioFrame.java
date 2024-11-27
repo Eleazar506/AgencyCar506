@@ -105,7 +105,7 @@ public static void muestraPanel(JPanel p){
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 7, true));
         jPanel1.setLayout(new java.awt.BorderLayout());
 
-        jPanel8.setBackground(new java.awt.Color(50, 140, 250));
+        jPanel8.setBackground(new java.awt.Color(140, 162, 192));
         jPanel8.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel8.setPreferredSize(new java.awt.Dimension(825, 80));
         jPanel8.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
@@ -159,7 +159,7 @@ public static void muestraPanel(JPanel p){
 
         jPanel1.add(jPanel8, java.awt.BorderLayout.PAGE_START);
 
-        jPanel10.setBackground(new java.awt.Color(40, 140, 250));
+        jPanel10.setBackground(new java.awt.Color(140, 162, 192));
         jPanel10.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 30, 20));
 
         jButton5.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
@@ -188,7 +188,7 @@ public static void muestraPanel(JPanel p){
 
         Muestra.setLayout(new java.awt.BorderLayout());
 
-        jPanel2.setBackground(new java.awt.Color(113, 161, 166));
+        jPanel2.setBackground(new java.awt.Color(140, 162, 192));
         jPanel2.setPreferredSize(new java.awt.Dimension(180, 586));
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
@@ -197,7 +197,7 @@ public static void muestraPanel(JPanel p){
         jPanel6.setPreferredSize(new java.awt.Dimension(170, 210));
         jPanel6.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 10));
 
-        shop.setBackground(new java.awt.Color(50, 140, 250));
+        shop.setBackground(new java.awt.Color(113, 161, 166));
         shop.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
         shop.setForeground(new java.awt.Color(255, 255, 255));
         shop.setText("Punto de venta");
@@ -210,7 +210,7 @@ public static void muestraPanel(JPanel p){
         });
         jPanel6.add(shop);
 
-        jButton1.setBackground(new java.awt.Color(50, 140, 250));
+        jButton1.setBackground(new java.awt.Color(113, 161, 166));
         jButton1.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("RRHH");
@@ -223,7 +223,7 @@ public static void muestraPanel(JPanel p){
         });
         jPanel6.add(jButton1);
 
-        jButton3.setBackground(new java.awt.Color(50, 140, 250));
+        jButton3.setBackground(new java.awt.Color(113, 161, 166));
         jButton3.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Inventario");
@@ -236,7 +236,7 @@ public static void muestraPanel(JPanel p){
         });
         jPanel6.add(jButton3);
 
-        jButton4.setBackground(new java.awt.Color(50, 140, 250));
+        jButton4.setBackground(new java.awt.Color(113, 161, 166));
         jButton4.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Contabilidad");
@@ -249,7 +249,7 @@ public static void muestraPanel(JPanel p){
         });
         jPanel6.add(jButton4);
 
-        jButton7.setBackground(new java.awt.Color(50, 140, 250));
+        jButton7.setBackground(new java.awt.Color(113, 161, 166));
         jButton7.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
         jButton7.setForeground(new java.awt.Color(255, 255, 255));
         jButton7.setText("Nueva cuenta");
@@ -262,7 +262,7 @@ public static void muestraPanel(JPanel p){
         });
         jPanel6.add(jButton7);
 
-        jButton2.setBackground(new java.awt.Color(50, 140, 250));
+        jButton2.setBackground(new java.awt.Color(113, 161, 166));
         jButton2.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(250, 250, 250));
         jButton2.setText("Cerrar sesión");
@@ -279,7 +279,7 @@ public static void muestraPanel(JPanel p){
 
         Muestra.add(jPanel2, java.awt.BorderLayout.LINE_START);
 
-        jPanel3.setBackground(new java.awt.Color(113, 161, 166));
+        jPanel3.setBackground(new java.awt.Color(140, 162, 192));
         jPanel3.setPreferredSize(new java.awt.Dimension(1101, 70));
         jPanel3.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 0, 0));
 
@@ -294,7 +294,7 @@ public static void muestraPanel(JPanel p){
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray));
         jPanel5.setMinimumSize(new java.awt.Dimension(500, 48));
-        jPanel5.setPreferredSize(new java.awt.Dimension(500, 50));
+        jPanel5.setPreferredSize(new java.awt.Dimension(200, 50));
         jPanel5.setLayout(new java.awt.GridBagLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Images/engraneWhite.png"))); // NOI18N
@@ -308,7 +308,7 @@ public static void muestraPanel(JPanel p){
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.insets = new java.awt.Insets(0, 230, 0, 10);
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 10);
         jPanel5.add(jLabel1, gridBagConstraints);
 
         jLabel2.setText("Eleazar");
@@ -337,7 +337,7 @@ public static void muestraPanel(JPanel p){
 
         Muestra.add(jPanel3, java.awt.BorderLayout.PAGE_START);
 
-        jPanel4.setBackground(new java.awt.Color(113, 161, 166));
+        jPanel4.setBackground(new java.awt.Color(140, 162, 192));
         jPanel4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -353,7 +353,7 @@ public static void muestraPanel(JPanel p){
 
         Muestra.add(jPanel4, java.awt.BorderLayout.LINE_END);
 
-        jPanel7.setBackground(new java.awt.Color(113, 161, 166));
+        jPanel7.setBackground(new java.awt.Color(140, 162, 192));
         jPanel7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);

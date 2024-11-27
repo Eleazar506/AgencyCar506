@@ -100,17 +100,17 @@ public static Login logS=new Login();
 
         jButton3.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
         jButton3.setText("Administración");
-        jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(50, 140, 250), 5));
+        jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(140, 162, 192), 5));
         jPanel10.add(jButton3);
 
         jButton4.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
         jButton4.setText("Terminar dia");
-        jButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(50, 140, 250), 5));
+        jButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(140, 162, 192), 5));
         jPanel10.add(jButton4);
 
         jButton1.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
         jButton1.setText("Cerrar sesión");
-        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(50, 140, 250), 5));
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(140, 162, 192), 5));
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButton1.setMinimumSize(new java.awt.Dimension(126, 20));
         jButton1.setPreferredSize(new java.awt.Dimension(126, 25));
@@ -126,7 +126,7 @@ public static Login logS=new Login();
         venta.setSize(new java.awt.Dimension(450, 350));
         venta.getContentPane().setLayout(new javax.swing.OverlayLayout(venta.getContentPane()));
 
-        jPanel1.setBackground(new java.awt.Color(50, 140, 250));
+        jPanel1.setBackground(new java.awt.Color(140, 162, 192));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 7));
 
         jLabel6.setText("Formulario de venta");
@@ -269,7 +269,7 @@ public static Login logS=new Login();
 
         Muestra.setLayout(new java.awt.BorderLayout());
 
-        jPanel2.setBackground(new java.awt.Color(113, 161, 166));
+        jPanel2.setBackground(new java.awt.Color(140, 162, 192));
         jPanel2.setPreferredSize(new java.awt.Dimension(990, 80));
         java.awt.FlowLayout flowLayout1 = new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 6, 25);
         flowLayout1.setAlignOnBaseline(true);
@@ -364,7 +364,7 @@ public static Login logS=new Login();
 
         Muestra.add(jPanel2, java.awt.BorderLayout.PAGE_START);
 
-        jPanel3.setBackground(new java.awt.Color(113, 161, 166));
+        jPanel3.setBackground(new java.awt.Color(140, 162, 192));
         jPanel3.setPreferredSize(new java.awt.Dimension(180, 446));
 
         jPanel7.setPreferredSize(new java.awt.Dimension(140, 520));
@@ -399,7 +399,7 @@ public static Login logS=new Login();
 
         Muestra.add(jPanel3, java.awt.BorderLayout.LINE_START);
 
-        jPanel5.setBackground(new java.awt.Color(113, 161, 166));
+        jPanel5.setBackground(new java.awt.Color(140, 162, 192));
         jPanel5.setPreferredSize(new java.awt.Dimension(180, 446));
 
         jPanel6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -428,7 +428,7 @@ public static Login logS=new Login();
 
         Muestra.add(jPanel5, java.awt.BorderLayout.LINE_END);
 
-        jPanel4.setBackground(new java.awt.Color(113, 161, 166));
+        jPanel4.setBackground(new java.awt.Color(140, 162, 192));
         jPanel4.setPreferredSize(new java.awt.Dimension(1101, 50));
         jPanel4.setLayout(new java.awt.GridBagLayout());
 

@@ -17,9 +17,9 @@ public class UserOrAdmin {
     
     public static ArrayList verificaAdmin(String user, String password){
         adminOuser.clear();
-        String query="SELECT nameuser, contrasenia FROM administradores WHERE nameuser='"+user+"' AND contrasenia='"+password+"';";
+       // String query="SELECT nameuser, contrasenia FROM administradores WHERE nameuser='"+user+"' AND contrasenia='"+password+"';";
    
-        ResultSet rs=conn.querys(query);
+        ResultSet rs=conn.queryusers("administradores",user,password);
         if(rs!=null){
             try{
                 while(rs.next()==true){
@@ -37,9 +37,9 @@ public class UserOrAdmin {
     
     public static ArrayList verificaConta(String user, String password){
           adminOuser.clear();
-        String query="SELECT nameuser, contrasenia FROM contadores WHERE nameuser='"+user+"' AND contrasenia='"+password+"';";
+       // String query="SELECT nameuser, contrasenia FROM contadores WHERE nameuser='"+user+"' AND contrasenia='"+password+"';";
    
-        ResultSet rs=conn.querys(query);
+        ResultSet rs=conn.queryusers("contadores",user,password);
         if(rs!=null){
             try{
                 while(rs.next()==true){

@@ -627,7 +627,11 @@ public static String id="";
                   horaEntrada=(String) comboHoraEntrada.getSelectedItem(), horaSalida=(String )comboHoraSalida.getSelectedItem(),
                   horaComida=(String) comboHoraComida.getSelectedItem(); 
                 int idpuesto=(int) comboPuesto.getSelectedIndex(),  idarea=(int)comboArea.getSelectedIndex();
+               
+                
                 logica.insertaE(idocurp, nombre, apellidoP, apellidoM, fechaN, fechaI, estado, telefono, mail, idarea, ubi, horaEntrada, horaSalida, horaComida, idpuesto);
+                
+                
         GestionEmpleados gee= new GestionEmpleados();
         gee.setVisible(true);
         super.setVisible(false);
