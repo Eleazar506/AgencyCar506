@@ -8,7 +8,7 @@ public class Conexion {
     public static  String password="zapatin04";
     public static String url="jdbc:postgresql://localhost:5432/";
     public static Statement s;
-    public static Connection conexion ;
+//    public static Connection conexion ;
     public static Connection con;
     
     public static void conectagency(){
@@ -20,26 +20,6 @@ public class Conexion {
         }
     }
     
-    
-    public static void conectaBd(){
-        try{
-            conexion = DriverManager.getConnection(url+nameBd, user, password);
-            s = conexion.createStatement();
-        }catch(SQLException e){
-            System.out.println(e.getMessage());
-        }
-    }
-    
-    public static ResultSet querys(String query){
-        ResultSet rs=null;
-        try{
-            rs=s.executeQuery(query);
-        }catch(SQLException e){
-            System.out.println(e.getMessage());
-        }
-
-        return rs;    
-    }
     public static ResultSet queryusers(String tabla,String user, String passw){
         ResultSet rs=null;
         String query="select nameuser, contrasenia from "+tabla+" where nameuser=? and contrasenia=?";
@@ -61,6 +41,31 @@ public class Conexion {
         }catch(Exception e){
             System.out.println(e);
         }
+    }
+    public static boolean querydelete(String tabla,int id){
+       boolean b=false;
+        String query="DELETE FROM "+tabla+" where id=?";
+        try{
+            PreparedStatement ps=con.prepareStatement(query);
+            ps.setInt(1, id);
+            ps.execute();
+            b=true;
+            //JOptionPane.showMessageDialog(null, "El registro se elimino correctamente","",JOptionPane.YES_OPTION);
+        }catch(SQLException e){
+            System.out.println(e.getMessage());
+        }
+        return b;
+    }
+    public static ResultSet queryInventary(){
+        ResultSet rs=null;
+        String query="select * from automovil;";
+        try{
+            PreparedStatement ps= con.prepareStatement(query);
+            rs=ps.executeQuery();
+        }catch(SQLException e){
+            System.out.println(e.getMessage());
+        }
+        return rs;
     }
     public static void querysInsertEmpleados(String idocurp, String nombre,
             String apellidoP, String apellidoM, String fechaN,String fechaI,
